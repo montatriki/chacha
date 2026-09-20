@@ -411,7 +411,7 @@ export function HallwayOverlay({
             outline: alignMode || mobileFloorAlignMode ? "2px solid #2563eb" : undefined,
             animation: alignMode || mobileFloorAlignMode ? undefined : "hallwayFrameIn 1.1s ease-out 0.25s both",
           }}
-          aria-label="Continue to the platform door"
+          aria-label="LevelUp AI: continue to the platform door"
         >
           <span
             className="aradi-gold-lining inline-flex items-center justify-center uppercase text-[#f7efe1]"

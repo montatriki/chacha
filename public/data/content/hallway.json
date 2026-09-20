@@ -183,7 +183,7 @@
     "continueBtn": {
       "x": 0.499,
       "y": 0.347,
-      "boxWidth": 0.073,
+      "boxWidth": 0.094,
       "boxHeight": 0.042,
       "scale": 1,
       "fontSize": 0.32,
@@ -311,7 +311,7 @@
       "layout": "compact",
       "blocks": [
         {
-          "title": "Showcase & e-commerce websites",
+          "title": "websites & e-commerce websites",
           "body": "Brand sites and online stores, designed and built to order.",
           "icon": "globe"
         },
@@ -331,7 +331,7 @@
           "icon": "instagram"
         },
         {
-          "title": "UGC",
+          "title": "Instagram campaign management && UGC",
           "body": "Authentic content made by creators for your brands.",
           "icon": "camera"
         },
@@ -516,7 +516,7 @@
           "icon": "couture"
         },
         {
-          "title": "Hospitality",
+          "title": "Hotels",
           "body": "Carthage Thalasso Gammarth",
           "icon": "hotel"
         },
