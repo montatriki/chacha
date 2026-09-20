@@ -1,0 +1,74 @@
+{
+  "room": {
+    "backgroundDesktop": "/data/levelup/aboutroomdesktop.png",
+    "backgroundMobile": "/data/levelup/aboutroommobile.png",
+    "eyebrow": "About Level Up Com",
+    "title": "Build · Innovate · Grow",
+    "intro": "Level Up Com is a digital marketing and communication agency. Branding, SEO, content creation, shooting, websites, campaigns and events: one team that takes your brand to the next level.",
+    "back": "Back to the hallway",
+    "close": "Close"
+  },
+  "stats": [
+    {
+      "value": "65+",
+      "label": "Projects delivered"
+    },
+    {
+      "value": "2.8K",
+      "label": "Community"
+    },
+    {
+      "value": "11",
+      "label": "Sectors served"
+    }
+  ],
+  "team": [
+    {
+      "id": "ceo",
+      "name": "Chacha",
+      "role": "CEO & Founder",
+      "photo": "/data/levelup/team/ceo.jpg",
+      "initials": "C",
+      "bio": "Leads the agency's vision and client relationships, from the first brief to the launch of every campaign.",
+      "links": [
+        {
+          "label": "Email",
+          "url": "mailto:levelupadgency@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "angela-mercato",
+      "name": "Angela Mercato",
+      "role": "Directrice artistique",
+      "photo": "/data/levelup/team/angela-mercato.jpg",
+      "initials": "AM",
+      "bio": "Shapes the visual identity of every project: art direction, shootings, set design and content creation.",
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/angelamarcato1"
+        }
+      ]
+    }
+  ],
+  "values": [
+    {
+      "title": "Build",
+      "body": "Brands, websites and spaces designed to last."
+    },
+    {
+      "title": "Innovate",
+      "body": "Fresh creative ideas, campaigns and content that stand out."
+    },
+    {
+      "title": "Grow",
+      "body": "Visibility, community and results you can measure."
+    }
+  ],
+  "contact": {
+    "instagram": "https://www.instagram.com/levelup.conseil/",
+    "instagramHandle": "@levelup.conseil",
+    "email": "levelupadgency@gmail.com"
+  }
+}

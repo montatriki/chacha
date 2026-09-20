@@ -1,0 +1,161 @@
+{
+  "room": {
+    "backgroundDesktop": "/data/levelup/eventroomdesktop.png",
+    "backgroundMobile": "/data/levelup/eventroommobile.png",
+    "eyebrow": "Events",
+    "title": "Corporate events & activations",
+    "intro": "Product launches, brand activations, shootings and campaigns produced by Level Up Com.",
+    "instagram": "https://www.instagram.com/levelup.conseil/",
+    "back": "Back to the hallway",
+    "openLabel": "View event",
+    "close": "Close"
+  },
+  "events": [
+    {
+      "id": "kreine-glow-kiss",
+      "title": "K-Reine · Glow Kiss launch",
+      "client": "K Reine",
+      "category": "Product launch",
+      "date": "2026",
+      "cover": "/data/events/kreine-glow-kiss.jpg",
+      "summary": "Launch event for the K-Reine Lip Oil Glow Kiss, with a lips-themed photo wall and welcome area.",
+      "details": [
+        "Concept, set design and production of the launch space",
+        "Photo wall, product display and guest welcome",
+        "Content creation: reel, photos and stories"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: K Reine",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "kreine-sun",
+      "title": "K-Reine · Sun care campaign",
+      "client": "K Reine",
+      "category": "Campaign",
+      "date": "2026",
+      "cover": "/data/events/kreine-sun.jpg",
+      "summary": "Outdoor shooting and campaign for the K-Reine sun care range.",
+      "details": [
+        "Art direction and product styling",
+        "Outdoor shooting",
+        "Social media campaign"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: CAMPAGNE",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "riviera-event",
+      "title": "Riviera · Event",
+      "client": "Riviera",
+      "category": "Corporate event",
+      "date": "2026",
+      "cover": "/data/events/riviera.jpg",
+      "summary": "Brand event for the ready-to-wear label Riviera.",
+      "details": [
+        "Event concept and coordination",
+        "Store dressing and signage",
+        "Reel and photo coverage"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: Riviera",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "kreine-event",
+      "title": "K-Reine · Event",
+      "client": "K Reine",
+      "category": "Corporate event",
+      "date": "2026",
+      "cover": "/data/events/kreine-event.jpg",
+      "summary": "Event production for K Reine.",
+      "details": [
+        "Event concept and coordination",
+        "On-site branding",
+        "Content coverage"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: Évent KREINE",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "ben-nasr-website",
+      "title": "Ben Nasr · Website launch",
+      "client": "Ben Nasr",
+      "category": "Launch",
+      "date": "2026",
+      "cover": "/data/events/ben-nasr.jpg",
+      "summary": "Launch of bennasr.com.tn for the jeweller and watchmaker Ben Nasr.",
+      "details": [
+        "Website design and development",
+        "Launch announcement content",
+        "Social media rollout"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: WebsiteBenNasr",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        },
+        {
+          "label": "bennasr.com.tn",
+          "url": "https://www.bennasr.com.tn/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "holistix",
+      "title": "Holistix · Brand content",
+      "client": "Holistix",
+      "category": "Campaign",
+      "date": "2026",
+      "cover": "/data/events/holistix.jpg",
+      "summary": "Content creation and campaign for the Holistix food-supplement brand.",
+      "details": [
+        "Product shooting",
+        "Reels and stories",
+        "Campaign management"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: Holistix",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": []
+    },
+    {
+      "id": "godzilla-all-in-one",
+      "title": "Godzilla All In One · Shooting",
+      "client": "Level Up Com",
+      "category": "Shooting",
+      "date": "2026",
+      "cover": "/data/events/godzilla.jpg",
+      "summary": "Studio production and video shooting.",
+      "details": [
+        "Studio setup and lighting",
+        "Video production",
+        "Post-production"
+      ],
+      "links": [],
+      "media": []
+    }
+  ]
+}

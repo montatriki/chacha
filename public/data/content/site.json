@@ -1,0 +1,108 @@
+{
+  "name": "LEVEL UP COM",
+  "legalName": "Level Up Com",
+  "tagline": "Take your brand to the next level",
+  "description": "Level Up Com is a digital marketing and communication agency: strategy, creative, campaigns and events that take your brand to the next level.",
+  "email": "levelupadgency@gmail.com",
+  "address": "Address to be completed",
+  "addressShort": "Address to be completed",
+  "website": "instagram.com/levelup.conseil",
+  "websiteUrl": "https://www.instagram.com/levelup.conseil/",
+  "appUrl": "https://levelupia.agency/",
+  "openAppInNewTab": false,
+  "brandIcon": "/data/levelup/icon-on-dark.png",
+  "backgroundImage": "/data/Aradi_background.png",
+  "features": {
+    "enablePreloader": true,
+    "enableSound": false
+  },
+  "colors": {
+    "navy": "#0a0f1f",
+    "navyLift": "#141f3f",
+    "blue": "#2563eb",
+    "violet": "#7c3aed",
+    "grey": "#e5e7eb",
+    "teal": "#141f3f",
+    "deep": "#0a0f1f"
+  },
+  "audio": {
+    "intro": "/data/assets/intro-horizon.mp3",
+    "volume": 0.42
+  },
+  "scenes": {
+    "journey": {
+      "id": "journey",
+      "video": "/data/videos/levelup-journey.mp4",
+      "poster": "/data/videos/levelup-journey-poster.jpg",
+      "videoPortrait": "/data/videos/levelup-journey-portrait.mp4",
+      "posterPortrait": "/data/videos/levelup-journey-portrait-poster.jpg"
+    },
+    "hallway": {
+      "id": "hallway",
+      "video": "/data/videos/hallway-enter.mp4",
+      "poster": "/data/videos/poster-hallway.jpg"
+    },
+    "toDoor": {
+      "id": "to-door",
+      "video": "/data/videos/hallway-to-door.mp4",
+      "poster": "/data/videos/poster-door.jpg"
+    },
+    "portal": {
+      "id": "portal",
+      "video": "/data/videos/portal-open.mp4",
+      "poster": "/data/videos/poster-portal.jpg"
+    }
+  },
+  "copy": {
+    "seo": {
+      "title": "LEVEL UP COM — Digital Marketing",
+      "ogTitle": "LEVEL UP COM — Digital Marketing"
+    },
+    "hidden": {
+      "heading": "LEVEL UP COM — Digital Marketing",
+      "about": "Level Up Com supports brands with strategy, content creation, advertising campaigns, SEO, outdoor advertising and events."
+    },
+    "preloader": {
+      "label": "Loading the Level Up Com experience",
+      "preparing": "Preparing the experience",
+      "ready": "Ready",
+      "reducedMotion": "Loading",
+      "word": "LEVEL UP",
+      "wordFont": "600 160px Poppins, Montserrat, sans-serif"
+    },
+    "readyGate": {
+      "line": "Take your brand to the next level.",
+      "button": "Enter the Experience"
+    },
+    "journey": {
+      "eyebrow": "Digital Marketing",
+      "headline": "Take your brand to the next level.",
+      "body": "Strategy, creative, campaigns and events: one agency, every channel."
+    },
+    "hallway": {
+      "continue": "Continue",
+      "enter": "Enter"
+    },
+    "footer": {
+      "privacy": "Privacy Policy",
+      "rights": "Level Up Com. All rights reserved."
+    },
+    "door": {
+      "button": "Welcome to the future"
+    },
+    "finale": {
+      "eyebrow": "LEVEL UP COM",
+      "lines": [
+        "The most powerful partner in your domain.",
+        "Strategy. Creative. Campaigns. Events.",
+        "Your brand, taken to the next level."
+      ],
+      "cta": "Entering Level Up IA",
+      "destination": "https://levelupia.agency/"
+    }
+  },
+  "logo": "/data/levelup/logo-primary.png",
+  "logoOnDark": "/data/levelup/logo-white.png",
+  "icon": "/data/levelup/icon.png",
+  "iconOnDark": "/data/levelup/icon-on-dark.png"
+}

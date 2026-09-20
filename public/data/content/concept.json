@@ -1,0 +1,55 @@
+{
+  "film": { "src": "/data/videos/aradi-concept.mp4", "poster": "/data/videos/poster-concept.jpg", "width": 1280, "height": 720, "duration": 28.2917 },
+  "playbackRate": 0.7,
+  "minWidthDetail": 820,
+  "minWidthWide": 560,
+  "palette": { "ivory": "#ffffff", "muted": "#b8bdc9", "gold": "#2563eb", "dark": "#0a0f1f" },
+  "data": {
+    "plotAreaSqft": 72500,
+    "permittedGfaSqft": 185000,
+    "parkingGfaSqft": 54000,
+    "askingPriceAed": 65000000,
+    "developmentType": "Premium Residential",
+    "designStyle": "Contemporary",
+    "unitMixLabel": "1–3 Bedroom Mix",
+    "positioning": "Premium",
+    "generatedBrief": "Premium contemporary residences optimized for maximum NSA efficiency",
+    "options": [
+      { "name": "Courtyard", "efficiency": 76.8, "recommended": false },
+      { "name": "L-Shape", "efficiency": 79.5, "recommended": false },
+      { "name": "Terraced Tower", "efficiency": 82, "recommended": true }
+    ],
+    "selectedOption": "Terraced Tower",
+    "nsaSqft": 151700,
+    "efficiency": 82,
+    "buaSqft": 239000,
+    "unitMix": { "oneBedroom": 45, "twoBedroom": 35, "threeBedroom": 20 },
+    "totalUnits": 168,
+    "parkingSpaces": 215,
+    "floors": 18,
+    "constructionCostPerSqft": 475,
+    "proposedSellingPricePerSqft": 1750,
+    "otherCostsAed": 22000000,
+    "projectName": "The Terraces",
+    "locationName": "Dubai"
+  },
+  "labels": {
+    "leftHeading": "Optimized Unit Mix",
+    "rightHeading": "Project Feasibility",
+    "rightCaption": "Projected Value",
+    "brochureDescriptor": "AI-Generated Development Concept",
+    "unitMix": ["1 BR", "2 BR", "3 BR"],
+    "bars": ["GFA", "NSA", "Efficiency", "Units", "Parking", "Floors"],
+    "metrics": ["Total Cost", "Revenue", "Gross Profit", "Margin"]
+  },
+  "scenes": [
+    { "id": "discover", "window": [0.35, 0.6, 1.75, 0.45], "x": 5, "y": 30, "align": "left", "widthPct": 30, "title": "One plot.\nEvery possibility.", "body": "ARADI begins with the land data already attached to the listing." },
+    { "id": "select", "window": [1.95, 0.6, 4.15, 0.45], "x": 5, "y": 32, "align": "left", "widthPct": 28, "title": "The opportunity,\nunderstood instantly.", "body": "Plot area, permitted GFA, parking allowance and asking price are read automatically." },
+    { "id": "define", "window": [4.35, 0.6, 7.85, 0.45], "x": 5, "y": 22, "align": "left", "widthPct": 30, "title": "The development brief\nbuilds itself.", "body": "Site constraints and project objectives become a structured design direction." },
+    { "id": "generate", "window": [8.05, 0.6, 13.3, 0.45], "x": 5, "y": 20, "align": "left", "widthPct": 30, "title": "Multiple schemes.\nOne optimal direction.", "body": "Viable concepts are generated, tested and ranked by development efficiency." },
+    { "id": "resolve", "window": [13.55, 0.6, 17.45, 0.45], "x": 5, "y": 20, "align": "left", "widthPct": 30, "title": "From massing to\nintelligent floor plans.", "body": "Cores, circulation and unit layouts are optimized to maximize net saleable area." },
+    { "id": "evaluate", "window": [18.6, 0.6, 21.15, 0.45], "x": 50, "y": 9, "align": "center", "widthPct": 24, "title": "Design and feasibility\nmove together.", "body": "Efficiency, construction cost, revenue and profitability update as one connected model." },
+    { "id": "visualize", "window": [21.7, 0.6, 26, 0.45], "x": 95, "y": 20, "align": "right", "widthPct": 28, "title": "See the project\nbefore it exists.", "body": "The selected building is placed within its real urban surroundings." },
+    { "id": "launch", "window": [26.3, 0.7, 40, 0], "x": 5, "y": 20, "align": "left", "widthPct": 30, "title": "From land listing to\nlaunch-ready concept.", "body": "Plans, feasibility, project identity and brochure — generated through one intelligent workflow.", "footer": "ARADI Development Intelligence" }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "storageKey": "levelup-hallway-layout-v1",
+  "defaultLayout": {
+    "frames": {
+      "offer": {
+        "x": 0.105,
+        "y": 0.2,
+        "width": 0.126,
+        "height": 0.473,
+        "fontSize": 0.087,
+        "lineHeight": 0.96,
+        "letterSpacing": 0,
+        "gap": 0.022,
+        "paddingX": 0.07,
+        "paddingY": 0.08,
+        "textAlign": "center",
+        "justify": "center",
+        "perspective": 1180,
+        "rotateX": 0,
+        "rotateY": 36,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "hintSize": 0.02,
+        "hintTracking": 0.18,
+        "hintGap": 0.04
+      },
+      "how": {
+        "x": 0.768,
+        "y": 0.183,
+        "width": 0.13,
+        "height": 0.5,
+        "fontSize": 0.056,
+        "lineHeight": 1.08,
+        "letterSpacing": 0.02,
+        "gap": 0.02,
+        "paddingX": 0.08,
+        "paddingY": 0.08,
+        "textAlign": "center",
+        "justify": "center",
+        "perspective": 520,
+        "rotateX": 0,
+        "rotateY": -29.5,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "hintSize": 0.02,
+        "hintTracking": 0.22,
+        "hintGap": 0.035
+      },
+      "readyLeft": {
+        "x": 0.279,
+        "y": 0.337,
+        "width": 0.075,
+        "height": 0.283,
+        "fontSize": 0.1,
+        "lineHeight": 1.5,
+        "letterSpacing": 0.015,
+        "gap": 0,
+        "paddingX": 0.08,
+        "paddingY": 0.18,
+        "textAlign": "center",
+        "justify": "center",
+        "perspective": 900,
+        "rotateX": 0,
+        "rotateY": 6,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "hintSize": 0.024,
+        "hintTracking": 0.2,
+        "hintGap": 0.05
+      },
+      "readyRight": {
+        "x": 0.642,
+        "y": 0.347,
+        "width": 0.075,
+        "height": 0.259,
+        "fontSize": 0.1,
+        "lineHeight": 1.5,
+        "letterSpacing": 0.02,
+        "gap": 0,
+        "paddingX": 0.08,
+        "paddingY": 0.18,
+        "textAlign": "center",
+        "justify": "center",
+        "perspective": 900,
+        "rotateX": 0,
+        "rotateY": -6,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "hintSize": 0.024,
+        "hintTracking": 0.2,
+        "hintGap": 0.05
+      }
+    },
+    "floor": {
+      "wash": [
+        0.921,
+        0.695,
+        0.72,
+        1,
+        0.54,
+        0.7,
+        0.46,
+        0.7
+      ],
+      "washOpacity": 0,
+      "pulseDuration": 6.9,
+      "lines": []
+    },
+    "doorGlow": {
+      "x": 0.471,
+      "y": 0.371,
+      "width": 0.056,
+      "height": 0.23,
+      "borderWidth": 0.0024,
+      "intensity": 1.13,
+      "pulseDuration": 3.5,
+      "radius": 2
+    },
+    "portalDoorGlow": {
+      "x": 0.395,
+      "y": 0.205,
+      "width": 0.209,
+      "height": 0.597,
+      "borderWidth": 0.0051,
+      "intensity": 1.48,
+      "pulseDuration": 3.9,
+      "radius": 2
+    },
+    "beams": {
+      "offer": {
+        "originX": 0.49,
+        "originY": 0.6,
+        "offsetX": 0.002,
+        "offsetY": 0.015,
+        "angleOffset": 0,
+        "angle": -8.5,
+        "useAngleOverride": false,
+        "spread": 1,
+        "length": 1,
+        "emitterScale": 1,
+        "panelW": 0.4,
+        "panelH": 0.58,
+        "panelX": 0.5,
+        "panelY": 0.5
+      },
+      "how": {
+        "originX": 0.5,
+        "originY": 0.63,
+        "offsetX": 0,
+        "offsetY": 0,
+        "angleOffset": 0,
+        "angle": 180,
+        "useAngleOverride": false,
+        "spread": 1,
+        "length": 1,
+        "emitterScale": 1,
+        "panelW": 0.4,
+        "panelH": 0.58,
+        "panelX": 0.5,
+        "panelY": 0.5
+      },
+      "clients": {
+        "originX": 0.5,
+        "originY": 0.5,
+        "offsetX": 0.002,
+        "offsetY": 0.015,
+        "angleOffset": 0,
+        "angle": -8.5,
+        "useAngleOverride": false,
+        "spread": 1,
+        "length": 1,
+        "emitterScale": 1,
+        "panelW": 0.4,
+        "panelH": 0.58,
+        "panelX": 0.5,
+        "panelY": 0.5
+      }
+    },
+    "continueBtn": {
+      "x": 0.499,
+      "y": 0.347,
+      "boxWidth": 0.073,
+      "boxHeight": 0.042,
+      "scale": 1,
+      "fontSize": 0.32,
+      "letterSpacing": 0.14,
+      "padX": 0.06,
+      "padY": 0.12,
+      "borderOpacity": 0.56,
+      "borderWidth": 1,
+      "bgOpacity": 0.88,
+      "radius": 0,
+      "showArrow": true,
+      "arrowGap": 0,
+      "arrowSize": 14,
+      "rotateZ": 0
+    },
+    "enterBtn": {
+      "x": 0.5,
+      "y": 0.142,
+      "logoSize": 0.045,
+      "gap": 0.012,
+      "labelSize": 0.01,
+      "letterSpacing": 0,
+      "padX": 0.004,
+      "padY": 0.006,
+      "showLabel": true
+    },
+    "mobileFloorCards": {
+      "offer": {
+        "x": 0.393,
+        "y": 0.783,
+        "width": 0.213,
+        "height": 0.086,
+        "perspective": 370,
+        "rotateX": 48,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "originX": 0.5,
+        "originY": 1,
+        "hitX": 0.38,
+        "hitY": 0.76,
+        "hitWidth": 0.24,
+        "hitHeight": 0.12
+      },
+      "how": {
+        "x": 0.426,
+        "y": 0.685,
+        "width": 0.148,
+        "height": 0.085,
+        "perspective": 290,
+        "rotateX": 52.5,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "skewX": 0,
+        "skewY": 0,
+        "originX": 0.5,
+        "originY": 1,
+        "hitX": 0.41,
+        "hitY": 0.66,
+        "hitWidth": 0.18,
+        "hitHeight": 0.12
+      }
+    }
+  },
+  "frames": {
+    "offer": {
+      "lines": [
+        {
+          "text": "Our services.",
+          "tone": "white"
+        },
+        {
+          "text": "Own the Process.",
+          "tone": "teal"
+        }
+      ],
+      "hint": "Click for details",
+      "projectionId": "offer"
+    },
+    "how": {
+      "lines": [
+        {
+          "text": "ABOUT",
+          "tone": "white"
+        }
+      ],
+      "hint": "Click to enter",
+      "projectionId": "about"
+    },
+    "readyLeft": {
+      "lines": [
+        {
+          "text": "Our",
+          "tone": "teal"
+        },
+        {
+          "text": "Clients",
+          "tone": "white"
+        }
+      ],
+      "hint": "Click for details",
+      "projectionId": "clients"
+    },
+    "readyRight": {
+      "lines": [
+        {
+          "text": "Our",
+          "tone": "teal"
+        },
+        {
+          "text": "Events",
+          "tone": "white"
+        }
+      ],
+      "hint": "Click to enter",
+      "projectionId": "events"
+    }
+  },
+  "projections": {
+    "offer": {
+      "id": "offer",
+      "eyebrow": "Our services",
+      "closeLabel": "Close",
+      "layout": "compact",
+      "blocks": [
+        {
+          "title": "Showcase & e-commerce websites",
+          "body": "Brand sites and online stores, designed and built to order.",
+          "icon": "globe"
+        },
+        {
+          "title": "Advertising campaigns",
+          "body": "Planning and management of multi-channel advertising campaigns.",
+          "icon": "megaphone"
+        },
+        {
+          "title": "SEO & search ranking",
+          "body": "Organic and paid search to build lasting visibility.",
+          "icon": "search"
+        },
+        {
+          "title": "Instagram campaign management",
+          "body": "Strategy, content and day-to-day management of your Instagram campaigns.",
+          "icon": "instagram"
+        },
+        {
+          "title": "UGC",
+          "body": "Authentic content made by creators for your brands.",
+          "icon": "camera"
+        },
+        {
+          "title": "Outdoor advertising",
+          "body": "Out-of-home poster campaigns that reach your local audience.",
+          "icon": "billboard"
+        },
+        {
+          "title": "Signage",
+          "body": "Design and installation of signs that assert your identity.",
+          "icon": "sign"
+        },
+        {
+          "title": "Store branding",
+          "body": "Dressing and staging of your retail spaces.",
+          "icon": "store"
+        },
+        {
+          "title": "Display units",
+          "body": "Made-to-measure displays that put your products forward.",
+          "icon": "display"
+        },
+        {
+          "title": "Exhibition stands",
+          "body": "Trade-show stands designed, built and installed for your events.",
+          "icon": "stand"
+        },
+        {
+          "title": "Corporate events",
+          "body": "End-to-end organisation of company events.",
+          "icon": "event"
+        }
+      ],
+      "title": "Everything your brand needs to level up.",
+      "tagline": "Eleven ways to take your brand to the next level."
+    },
+    "how": {
+      "id": "how",
+      "eyebrow": "How it works",
+      "closeLabel": "Close",
+      "blocks": [
+        {
+          "index": "01",
+          "title": "Brief & strategy",
+          "body": "We analyse your goals, market and audiences to define the right strategy.",
+          "icon": "brief"
+        },
+        {
+          "index": "02",
+          "title": "Creative & production",
+          "body": "Websites, content, campaigns, print and event materials: our teams design and produce.",
+          "icon": "create"
+        },
+        {
+          "index": "03",
+          "title": "Launch & follow-up",
+          "body": "Roll-out, results measurement and continuous optimisation of your actions.",
+          "icon": "launch"
+        }
+      ],
+      "title": "From brief to launch in three steps."
+    },
+    "clients": {
+      "id": "clients",
+      "eyebrow": "Portfolio",
+      "title": "Brands that already levelled up with us.",
+      "closeLabel": "Close",
+      "blocks": [
+        {
+          "title": "Cosmetics",
+          "body": "Happyness by Djoya · K Reine",
+          "icon": "cosmetics",
+          "image": "/data/clients/happyness-by-djoya-card.jpg",
+          "imageAlt": "Happyness by Djoya sun care campaign",
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/happyness-by-djoya-card.jpg",
+              "label": "Happyness by Djoya"
+            },
+            {
+              "type": "video",
+              "src": "/data/levelup/k.mp4",
+              "label": "K Reine"
+            }
+          ]
+        },
+        {
+          "title": "Jewellery",
+          "body": "Ben Nasr · Aslam Fakhkah",
+          "icon": "gem",
+          "image": "/data/clients/ben-nasr-card.jpg",
+          "imageAlt": "Ben Nasr boutique facade with Cartier and Chopard signage",
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-card.jpg",
+              "label": "Ben Nasr"
+            }
+          ]
+        },
+        {
+          "title": "Real estate development",
+          "body": "The Panthéon",
+          "icon": "building"
+        },
+        {
+          "title": "Sport",
+          "body": "TFS · GYM Boxe · Padel Connexion · Sunset Pilates · SKY Padel",
+          "icon": "sport"
+        },
+        {
+          "title": "Food supplements",
+          "body": "Holistix · Holigums",
+          "icon": "leaf"
+        },
+        {
+          "title": "Restaurants",
+          "body": "Secrito salon de thé",
+          "icon": "cup"
+        },
+        {
+          "title": "Silverware",
+          "body": "Table Espace",
+          "icon": "silver"
+        },
+        {
+          "title": "Ready-to-wear",
+          "body": "Riviera · 5Progress",
+          "icon": "hanger"
+        },
+        {
+          "title": "Haute couture",
+          "body": "Faouizia Frad",
+          "icon": "couture"
+        },
+        {
+          "title": "Hospitality",
+          "body": "Carthage Thalasso Gammarth",
+          "icon": "hotel"
+        },
+        {
+          "title": "Industry",
+          "body": "Groupe Soquibat",
+          "icon": "factory"
+        }
+      ]
+    }
+  },
+  "mobileCards": {
+    "offer": {
+      "title": "Our Services",
+      "subtitle": "Websites, campaigns, SEO, events",
+      "icon": "sparkles"
+    },
+    "readyLeft": {
+      "title": "Our Clients",
+      "subtitle": "Brands that levelled up with us",
+      "icon": "users"
+    },
+    "readyRight": {
+      "title": "Our Events",
+      "subtitle": "Launches, activations, shootings",
+      "icon": "calendar"
+    },
+    "how": {
+      "title": "About",
+      "subtitle": "The team behind Level Up Com",
+      "icon": "info"
+    }
+  }
+}
