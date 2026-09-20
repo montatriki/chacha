@@ -57,13 +57,13 @@ export function MobileShowcase({ blocks, gold = GOLD }: { blocks: ProjectionBloc
       }}
     >
       {/* Stage */}
-      <div className="relative min-h-0 flex-1 overflow-hidden" style={{ borderRadius: 22, border: `1px solid rgba(231,201,138,0.45)`, boxShadow: "0 30px 70px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.14)", background: "linear-gradient(160deg, rgba(37,99,235,0.28) 0%, rgba(124,58,237,0.18) 45%, rgba(10,15,31,0.55) 100%)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}>
+      <div className="relative min-h-0 flex-1 overflow-hidden" style={{ borderRadius: 22, border: `1px solid rgba(231,201,138,0.45)`, boxShadow: "0 30px 70px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.14)", background: "linear-gradient(160deg, rgba(37,99,235,0.28) 0%, rgba(124,58,237,0.18) 45%, rgba(10,15,31,0.55) 100%)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", willChange: "transform", transform: "translateZ(0)", contain: "paint" }}>
         {/* moving colour aurora so the translucent stage feels alive */}
         <span aria-hidden className="pointer-events-none absolute" style={{ left: "-20%", top: "-30%", width: "90%", height: "90%", borderRadius: "50%", background: "radial-gradient(circle, rgba(37,99,235,0.55), transparent 65%)", filter: "blur(30px)", animation: "showcaseAuroraA 9s ease-in-out infinite alternate" }} />
         <span aria-hidden className="pointer-events-none absolute" style={{ right: "-25%", bottom: "-25%", width: "95%", height: "95%", borderRadius: "50%", background: "radial-gradient(circle, rgba(231,201,138,0.42), transparent 65%)", filter: "blur(34px)", animation: "showcaseAuroraB 11s ease-in-out infinite alternate" }} />
         <span aria-hidden className="pointer-events-none absolute" style={{ left: "30%", top: "35%", width: "70%", height: "70%", borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.4), transparent 65%)", filter: "blur(36px)", animation: "showcaseAuroraC 13s ease-in-out infinite alternate" }} />
         {/* light sweep */}
-        <span aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.12) 50%, transparent 65%)", backgroundSize: "220% 100%", animation: "projScanSheen 5s ease-in-out infinite" }} />
+        <span aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.12) 50%, transparent 65%)", backgroundSize: "220% 100%", animation: "projScanSheen 5s ease-in-out 1" }} />
         {block.image && (
           <span aria-hidden className="pointer-events-none absolute inset-0">
             {block.media?.length ? <CardMedia items={block.media} drift /> : <img src={block.image} alt="" className="h-full w-full object-cover" style={{ animation: "eventsBgDrift 14s ease-in-out infinite alternate" }} />}

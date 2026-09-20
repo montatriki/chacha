@@ -137,8 +137,11 @@ export function FrameProjection({
             inset 0 1px 0 rgba(255,255,255,0.12),
             inset 0 0 80px rgba(124,58,237,0.06)
           `,
-    backdropFilter: narrowViewport ? "blur(10px) saturate(1.3)" : "blur(20px) saturate(1.2)",
-    WebkitBackdropFilter: narrowViewport ? "blur(10px) saturate(1.3)" : "blur(20px) saturate(1.2)",
+    // phones keep a light glass blur over the door (panel is translucent there); desktop panel is near-opaque, blur dropped for 60fps
+    backdropFilter: narrowViewport ? "blur(10px) saturate(1.3)" : undefined,
+    WebkitBackdropFilter: narrowViewport ? "blur(10px) saturate(1.3)" : undefined,
+    willChange: "transform, opacity",
+    contain: "layout paint",
     "--proj-slide": narrowViewport ? "0px" : fromFloor ? "48px" : isOfferWall ? "-36px" : "36px",
     animation: narrowViewport
       ? "eventsRoomIn 0.6s ease-out both"
@@ -191,7 +194,6 @@ export function FrameProjection({
               "radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(191,210,254,0.22) 32%, rgba(37,99,235,0.06) 58%, transparent 78%)",
             filter: "blur(20px)",
             mixBlendMode: "screen",
-            animation: "projEmitterPulse 2.8s ease-in-out infinite",
           }}
         />
         <svg width="100%" height="100%" className="absolute inset-0" style={{ mixBlendMode: "screen", animation: "projBeamIn 0.95s ease-out both" }}>
@@ -249,7 +251,7 @@ export function FrameProjection({
               "linear-gradient(90deg, rgba(0,0,0,0.7) 0%, black 20%, black 70%, transparent 100%), linear-gradient(180deg, transparent 0%, black 30%, black 70%, transparent 100%)",
             WebkitMaskComposite: "source-in",
             maskComposite: "intersect",
-            animation: "projDustDrift 7s linear infinite",
+            animation: "projDustDrift 9s linear 1 both",
           }}
         />
       </div>
@@ -258,9 +260,9 @@ export function FrameProjection({
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            background: "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.06) 48%, transparent 62%)",
+            background: "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.05) 48%, transparent 62%)",
             backgroundSize: "220% 100%",
-            animation: "projScanSheen 4.5s ease-in-out infinite",
+            animation: "projScanSheen 4.5s ease-in-out 1",
           }}
           aria-hidden
         />
@@ -287,7 +289,7 @@ export function FrameProjection({
             <MobileShowcase blocks={content.blocks} gold={GOLD} />
           </div>
         ) : (
-          <div className="relative mt-6 min-h-0 flex-1 overflow-y-auto overscroll-contain text-left" style={{ display: "grid", gap: blockGap, gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gridAutoRows: "max-content", alignContent: "start", alignItems: "start", paddingRight: 4, scrollbarWidth: "thin", scrollbarColor: "rgba(231,201,138,0.4) transparent" } as CSSProperties}>
+          <div className="relative mt-6 min-h-0 flex-1 overflow-y-auto overscroll-contain text-left" style={{ display: "grid", gap: blockGap, gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gridAutoRows: "max-content", alignContent: "start", alignItems: "start", paddingRight: 4, contain: "layout paint", willChange: "scroll-position", scrollbarWidth: "thin", scrollbarColor: "rgba(231,201,138,0.4) transparent" } as CSSProperties}>
             {content.blocks.map((b, i) => (
               <GalleryCard key={b.title} block={b} index={i} gold={GOLD} titleSize={titleSize} bodySize={bodySize} pad={cardPad} />
             ))}
@@ -323,12 +325,15 @@ function GalleryCard({ block, index, gold, titleSize, bodySize, pad, phone = fal
         border: "1px solid rgba(231,201,138,0.32)",
         boxShadow: "0 18px 45px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12)",
         transition: "transform 320ms cubic-bezier(0.22,1,0.36,1), border-color 320ms, box-shadow 320ms",
-        animation: `eventCardIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) ${0.35 + index * 0.06}s both`,
+        animation: `projCardIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${0.3 + index * 0.05}s both`,
+        // Each card gets its own compositor layer so hover/scroll never re-rasterises its neighbours.
+        willChange: "transform",
+        transform: "translateZ(0)",
+        contain: "paint",
       }}
-      onMouseEnter={(e) => { const el = e.currentTarget; el.style.transform = "translateY(-4px)"; el.style.borderColor = "rgba(231,201,138,0.7)"; el.style.boxShadow = "0 28px 60px rgba(0,0,0,0.5), 0 0 40px rgba(231,201,138,0.12), inset 0 1px 0 rgba(255,255,255,0.16)"; }}
-      onMouseLeave={(e) => { const el = e.currentTarget; el.style.transform = ""; el.style.borderColor = "rgba(231,201,138,0.32)"; el.style.boxShadow = "0 18px 45px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12)"; }}
+      onMouseEnter={(e) => { const el = e.currentTarget; el.style.transform = "translateY(-4px) translateZ(0)"; el.style.borderColor = "rgba(231,201,138,0.7)"; el.style.boxShadow = "0 28px 60px rgba(0,0,0,0.5), 0 0 40px rgba(231,201,138,0.12), inset 0 1px 0 rgba(255,255,255,0.16)"; }}
+      onMouseLeave={(e) => { const el = e.currentTarget; el.style.transform = "translateZ(0)"; el.style.borderColor = "rgba(231,201,138,0.32)"; el.style.boxShadow = "0 18px 45px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12)"; }}
     >
-      <span aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.06) 50%, transparent 60%)", backgroundSize: "220% 100%", animation: `projScanSheen 6s ease-in-out ${index * 0.4}s infinite` }} />
       {phone && <span aria-hidden className="pointer-events-none absolute" style={{ left: "50%", top: "22%", width: 260, height: 260, transform: "translate(-50%, -50%)", background: "radial-gradient(circle, rgba(231,201,138,0.22) 0%, rgba(37,99,235,0.12) 40%, transparent 70%)", filter: "blur(10px)" }} />}
       {phone && <span aria-hidden className="pointer-events-none absolute left-0 right-0" style={{ top: 0, height: 4, background: `linear-gradient(90deg, transparent, ${gold}, transparent)`, opacity: 0.8 }} />}
       {block.image && (

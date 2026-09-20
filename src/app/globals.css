@@ -743,3 +743,6 @@
 .mb-9{margin-bottom:2.25rem}.px-9{padding-left:2.25rem;padding-right:2.25rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-\[12px\]{font-size:12px}.tracking-\[0\.34em\]{letter-spacing:.34em}
 .w-\[min\(86vw\,420px\)\]{width:min(86vw,420px)}
 @media (min-width:768px){.md\:mb-10{margin-bottom:2.5rem}.md\:w-\[min\(72vw\,340px\)\]{width:min(72vw,340px)}.md\:gap-4{gap:1rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.md\:text-\[11px\]{font-size:11px}.md\:tracking-\[0\.38em\]{letter-spacing:.38em}}
+
+/* gallery card entrance: opacity + transform only (no filter/rotateX) so cards never re-rasterise or bleed into neighbours */
+@keyframes projCardIn{0%{opacity:0;transform:translateY(28px) scale(.96) translateZ(0)}to{opacity:1;transform:translateY(0) scale(1) translateZ(0)}}

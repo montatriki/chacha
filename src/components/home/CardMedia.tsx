@@ -32,6 +32,19 @@ export function CardMedia({ items, className, drift = false, onLabel }: { items:
     return () => { window.clearTimeout(id); v?.removeEventListener("ended", onEnded); };
   }, [index, items.length, item]);
 
+  // Only decode video while the card is actually on screen: a scrolled-away card's video is paused,
+  // so a grid with several client videos never plays more than the visible ones at once.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) v.play().catch(() => {});
+      else v.pause();
+    }, { threshold: 0.05 });
+    io.observe(v);
+    return () => io.disconnect();
+  }, [index, item]);
+
   useEffect(() => {
     if (prev === null) return;
     const id = window.setTimeout(() => setPrev(null), 900);
