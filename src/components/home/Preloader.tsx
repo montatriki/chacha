@@ -21,26 +21,41 @@ interface Particle {
  * Renders the word onto an offscreen canvas and samples its bright pixels, exactly the
  * way the original samples the icon image (2px grid, brightness threshold, random pick).
  */
-function sampleWordPoints(word: string, font: string, count: number, w: number, h: number) {
+function sampleWordPoints(lines: { text: string; font: string }[], count: number, w: number, h: number) {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
   if (!ctx) return [];
-  // Measure the word to size the offscreen canvas around it.
-  ctx.font = font;
-  const metrics = ctx.measureText(word);
-  const textW = Math.ceil(metrics.width);
-  const textH = Math.ceil((metrics.actualBoundingBoxAscent || 120) + (metrics.actualBoundingBoxDescent || 20));
+  // Measure every line (the brand word, then the smaller "DIGITAL MARKETING" line under it)
+  // to size the offscreen canvas around the whole block, each line centred.
   const pad = 16;
+  const gapRatio = 0.34; // gap between lines, as a fraction of the first line's height
+  const measured = lines
+    .filter((l) => l.text.trim())
+    .map((l) => {
+      ctx.font = l.font;
+      const m = ctx.measureText(l.text);
+      const ascent = m.actualBoundingBoxAscent || 120;
+      const descent = m.actualBoundingBoxDescent || 20;
+      return { ...l, width: Math.ceil(m.width), ascent, height: Math.ceil(ascent + descent) };
+    });
+  if (measured.length === 0) return [];
+  const gap = Math.round(measured[0].height * gapRatio);
+  const textW = Math.max(...measured.map((m) => m.width));
+  const textH = measured.reduce((a, m) => a + m.height, 0) + gap * (measured.length - 1);
   const W = textW + pad * 2;
   const H = textH + pad * 2;
   canvas.width = W;
   canvas.height = H;
   ctx.fillStyle = "#000";
   ctx.fillRect(0, 0, W, H);
-  ctx.font = font;
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = "#fff";
-  ctx.fillText(word, pad, pad + (metrics.actualBoundingBoxAscent || 120));
+  let y = pad;
+  for (const m of measured) {
+    ctx.font = m.font;
+    ctx.fillText(m.text, pad + (textW - m.width) / 2, y + m.ascent);
+    y += m.height + gap;
+  }
 
   const { data } = ctx.getImageData(0, 0, W, H);
   const bright: { x: number; y: number }[] = [];
@@ -102,7 +117,7 @@ export function Preloader({
     let particles: Particle[] = [];
     let alive = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
-    const count = window.matchMedia("(max-width: 768px)").matches ? 900 : 2200;
+    const count = window.matchMedia("(max-width: 768px)").matches ? 1200 : 3000;
 
     const resize = () => {
       const w = window.innerWidth;
@@ -136,12 +151,22 @@ export function Preloader({
     let cancelled = false;
     const word = COPY.preloader.word || SITE.name;
     const font = COPY.preloader.wordFont || "600 160px Poppins, Montserrat, sans-serif";
-    const fontsReady = typeof document !== "undefined" && document.fonts ? document.fonts.load(font).then(() => undefined) : Promise.resolve();
+    const line2 = COPY.preloader.wordLine2 || "";
+    const font2 = COPY.preloader.wordLine2Font || "500 62px Poppins, Montserrat, sans-serif";
+    // Phones: the block is scaled down to fit the screen width, so a long second line would
+    // shrink below what the particles can draw. Stack its words (DIGITAL / MARKETING) in a
+    // larger face instead so every line stays legible.
+    const narrow = window.innerWidth < 640;
+    const font2Narrow = COPY.preloader.wordLine2FontNarrow || "500 104px Poppins, Montserrat, sans-serif";
+    const lines = narrow
+      ? [{ text: word, font }, ...line2.split(/\s+/).filter(Boolean).map((text) => ({ text, font: font2Narrow }))]
+      : [{ text: word, font }, { text: line2, font: font2 }];
+    const fontsReady = typeof document !== "undefined" && document.fonts ? Promise.all([document.fonts.load(font), document.fonts.load(font2)]).then(() => undefined) : Promise.resolve();
     Promise.race([fontsReady, new Promise<void>((r) => window.setTimeout(r, 1500))])
       .catch(() => undefined)
       .then(() => {
         if (cancelled) return;
-        const pts = sampleWordPoints(word, font, count, window.innerWidth, window.innerHeight);
+        const pts = sampleWordPoints(lines, count, window.innerWidth, window.innerHeight);
         seed(
           pts.length
             ? pts
@@ -264,6 +289,7 @@ export function Preloader({
         aria-live="polite"
       >
         <p className="text-[clamp(2rem,8vw,5rem)] font-bold tracking-[0.12em] text-white/90">{COPY.preloader.word || SITE.name}</p>
+        {COPY.preloader.wordLine2 && <p className="mt-2 text-[clamp(0.9rem,3.2vw,2rem)] font-medium tracking-[0.3em] text-white/80 uppercase">{COPY.preloader.wordLine2}</p>}
         <p className="mt-8 text-xs tracking-[0.35em] text-white/60 uppercase">{COPY.preloader.reducedMotion}</p>
       </div>
     );
