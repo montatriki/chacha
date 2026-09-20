@@ -76,9 +76,13 @@ function sampleWordPoints(lines: { text: string; font: string }[], count: number
   const drawH = H * scale;
   const ox = w / 2 - drawW / 2;
   const oy = h / 2 - drawH / 2;
+  for (let i = bright.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [bright[i], bright[j]] = [bright[j], bright[i]];
+  }
   const out: { x: number; y: number }[] = [];
   for (let i = 0; i < count; i++) {
-    const p = bright[Math.floor(Math.random() * bright.length)];
+    const p = bright[i % bright.length];
     out.push({ x: ox + p.x * scale, y: oy + p.y * scale });
   }
   return out;
@@ -117,7 +121,7 @@ export function Preloader({
     let particles: Particle[] = [];
     let alive = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
-    const count = window.matchMedia("(max-width: 768px)").matches ? 1200 : 3000;
+    const count = window.matchMedia("(max-width: 768px)").matches ? 2200 : 5400;
 
     const resize = () => {
       const w = window.innerWidth;
@@ -141,8 +145,8 @@ export function Preloader({
         ty: t.y,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
-        size: Math.random() * 1.4 + 0.5,
-        alpha: Math.random() * 0.5 + 0.4,
+        size: Math.random() * 1.3 + 0.9,
+        alpha: Math.random() * 0.25 + 0.75,
       }));
     };
 
@@ -231,7 +235,7 @@ export function Preloader({
         for (const pt of particles) {
           const dx = pt.x - w / 2;
           const glow = Math.max(0, 1 - Math.abs(dx / (w * 0.35) - (sweep * 2 - 1)) * 4);
-          pt.alpha = 0.55 + glow * 0.45;
+          pt.alpha = 0.82 + glow * 0.18;
         }
         if (now - holdStart >= HOLD_MS) {
           phase = "out";
