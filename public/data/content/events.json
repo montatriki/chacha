@@ -17,7 +17,7 @@
       "client": "TSF",
       "category": "Sport festival",
       "date": "November 2025",
-      "cover": "/data/events/tsf-cover.jpg",
+      "cover": "/data/events/tsf-poster.jpg",
       "summary": "Content coverage of the first Tunisia Sports Festival at the Parc des Expositions du Kram: four days of sport, fitness, combat sports, gaming and e-sport.",
       "details": [
         "First edition, 6 to 9 November 2025, Parc des Expositions du Kram, Tunis",
@@ -32,9 +32,18 @@
         {
           "label": "@tsf_2025",
           "url": "https://www.instagram.com/tsf_2025/"
+        },
+        {
+          "label": "www.tsf.tn",
+          "url": "https://www.tsf.tn/"
         }
       ],
       "media": [
+        {
+          "type": "image",
+          "src": "/data/events/tsf-poster.jpg",
+          "caption": "TSF · the biggest sports gathering in Africa · www.tsf.tn"
+        },
         {
           "type": "video",
           "src": "/data/levelup/tsf.mp4",
@@ -145,6 +154,48 @@
         }
       ],
       "media": []
+    },
+    {
+      "id": "holigums-campaign",
+      "title": "Holigums · Campaign shooting",
+      "client": "Holistix",
+      "category": "Campaign",
+      "date": "2026",
+      "cover": "/data/clients/holigums-anti-stress.jpg",
+      "summary": "Product campaign for the Holigums range by Holistix (Anti Stress, Beauty Boost, Multivitamins for kids), shot at the Hôtel Particulier La Marsa.",
+      "details": [
+        "Art direction: Angela Marcato",
+        "Photography: Mohamed Cherni",
+        "Location: Hôtel Particulier, La Marsa",
+        "Colour-coded sets for each product: pastel blue, pink and yellow"
+      ],
+      "links": [
+        {
+          "label": "@holigums",
+          "url": "https://www.instagram.com/holigums/"
+        },
+        {
+          "label": "Posts on Instagram",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "/data/clients/holigums-anti-stress.jpg",
+          "caption": "Holigums Anti Stress · good vibes"
+        },
+        {
+          "type": "image",
+          "src": "/data/clients/holigums-beauty-boost.jpg",
+          "caption": "Holigums Beauty Boost"
+        },
+        {
+          "type": "image",
+          "src": "/data/clients/holigums-kids.jpg",
+          "caption": "Holigums Multivitamins for kids"
+        }
+      ]
     }
   ]
 }

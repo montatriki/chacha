@@ -316,8 +316,8 @@
           "icon": "globe"
         },
         {
-          "title": "Advertising campaigns",
-          "body": "Planning and management of multi-channel advertising campaigns.",
+          "title": "Advertising campaigns & Corporate events",
+          "body": "Planning and management of multi-channel advertising campaigns. End-to-end organisation of company events.",
           "icon": "megaphone"
         },
         {
@@ -326,48 +326,23 @@
           "icon": "search"
         },
         {
-          "title": "Instagram campaign management",
-          "body": "Strategy, content and day-to-day management of your Instagram campaigns.",
-          "icon": "instagram"
-        },
-        {
           "title": "Instagram campaign management && UGC",
           "body": "Authentic content made by creators for your brands.",
           "icon": "camera"
         },
         {
-          "title": "Outdoor advertising",
-          "body": "Out-of-home poster campaigns that reach your local audience.",
-          "icon": "billboard"
-        },
-        {
-          "title": "Signage",
-          "body": "Design and installation of signs that assert your identity.",
-          "icon": "sign"
-        },
-        {
-          "title": "Store branding",
+          "title": " shooting && branding",
           "body": "Dressing and staging of your retail spaces.",
           "icon": "store"
         },
         {
-          "title": "Display units",
-          "body": "Made-to-measure displays that put your products forward.",
+          "title": "Display units & Exhibition stands",
+          "body": "Made-to-measure displays that put your products forward. Trade-show stands designed, built and installed for your events.",
           "icon": "display"
-        },
-        {
-          "title": "Exhibition stands",
-          "body": "Trade-show stands designed, built and installed for your events.",
-          "icon": "stand"
-        },
-        {
-          "title": "Corporate events",
-          "body": "End-to-end organisation of company events.",
-          "icon": "event"
         }
       ],
-      "title": "Everything your brand needs to level up.",
-      "tagline": "Eleven ways to take your brand to the next level."
+      "title": "Everything your brand needs to LEVELUP.",
+      "tagline": "Amplify your impact wiith LEVELUP"
     },
     "how": {
       "id": "how",
@@ -424,9 +399,19 @@
           "title": "Jewellery",
           "body": "Ben Nasr · Aslam Fakhkah",
           "icon": "gem",
-          "image": "/data/clients/ben-nasr-card.jpg",
+          "image": "/data/clients/ben-nasr-ice-cream.jpg",
           "imageAlt": "Ben Nasr boutique facade with Cartier and Chopard signage",
           "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-ice-cream.jpg",
+              "label": "Ben Nasr · jewellery campaign"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-scarf.jpg",
+              "label": "Ben Nasr · jewellery campaign"
+            },
             {
               "type": "image",
               "src": "/data/clients/ben-nasr-card.jpg",
@@ -452,9 +437,14 @@
           "title": "Sport",
           "body": "TFS · GYM Boxe · Padel Connexion · Sunset Pilates · SKY Padel",
           "icon": "sport",
-          "image": "/data/clients/tsf-card.jpg",
+          "image": "/data/events/tsf-poster.jpg",
           "imageAlt": "Sport clients",
           "media": [
+            {
+              "type": "image",
+              "src": "/data/events/tsf-poster.jpg",
+              "label": "Tunisia Sports Festival"
+            },
             {
               "type": "video",
               "src": "/data/levelup/tsf.mp4",
@@ -476,9 +466,24 @@
           "title": "Food supplements",
           "body": "Holistix · Holigums",
           "icon": "leaf",
-          "image": "/data/clients/holistix-card.jpg",
+          "image": "/data/clients/holigums-anti-stress.jpg",
           "imageAlt": "Holistix",
           "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/holigums-anti-stress.jpg",
+              "label": "Holigums · Anti Stress"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/holigums-beauty-boost.jpg",
+              "label": "Holigums · Beauty Boost"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/holigums-kids.jpg",
+              "label": "Holigums · Multivitamins for kids"
+            },
             {
               "type": "video",
               "src": "/data/clients/holistix-loop.mp4",
@@ -487,7 +492,17 @@
           ]
         },
         {
-          "title": "Restaurants",
+          "title": "Ready-to-wear",
+          "body": "Riviera · 5Progress",
+          "icon": "hanger"
+        },
+        {
+          "title": "Silverware",
+          "body": "Table Espace",
+          "icon": "silver"
+        },
+        {
+          "title": "Restaurants && Coffee",
           "body": "Secrito salon de thé",
           "icon": "cup",
           "image": "/data/clients/secrito-card.jpg",
@@ -501,19 +516,17 @@
           ]
         },
         {
-          "title": "Silverware",
-          "body": "Table Espace",
-          "icon": "silver"
-        },
-        {
-          "title": "Ready-to-wear",
-          "body": "Riviera · 5Progress",
-          "icon": "hanger"
-        },
-        {
           "title": "Haute couture",
           "body": "Faouizia Frad",
-          "icon": "couture"
+          "icon": "couture",
+          "image": "/data/clients/couture-green-shoot.jpg",
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/couture-green-shoot.jpg",
+              "label": "Haute couture shooting"
+            }
+          ]
         },
         {
           "title": "Hotels",
@@ -523,7 +536,15 @@
         {
           "title": "Industry",
           "body": "Groupe Soquibat",
-          "icon": "factory"
+          "icon": "factory",
+          "image": "/data/clients/soquibat-logo.png",
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/soquibat-logo.png",
+              "label": "Groupe Soquibat"
+            }
+          ]
         }
       ]
     }
