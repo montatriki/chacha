@@ -3,8 +3,8 @@
     "backgroundDesktop": "/data/levelup/eventroomdesktop.png",
     "backgroundMobile": "/data/levelup/eventroommobile.png",
     "eyebrow": "Events",
-    "title": "Corporate events & activations",
-    "intro": "Product launches, brand activations, shootings and campaigns produced by Level Up Com.",
+    "title": "Events & activations",
+    "intro": "Sport festivals, club launches, brand activations and shootings produced by Level Up Com.",
     "instagram": "https://www.instagram.com/levelup.conseil/",
     "back": "Back to the hallway",
     "openLabel": "View event",
@@ -12,149 +12,138 @@
   },
   "events": [
     {
-      "id": "kreine-glow-kiss",
-      "title": "K-Reine · Glow Kiss launch",
-      "client": "K Reine",
-      "category": "Product launch",
-      "date": "2026",
-      "cover": "/data/events/kreine-glow-kiss.jpg",
-      "summary": "Launch event for the K-Reine Lip Oil Glow Kiss, with a lips-themed photo wall and welcome area.",
+      "id": "tsf",
+      "title": "Tunisia Sports Festival",
+      "client": "TSF",
+      "category": "Sport festival",
+      "date": "November 2025",
+      "cover": "/data/events/tsf-cover.jpg",
+      "summary": "Content coverage of the first Tunisia Sports Festival at the Parc des Expositions du Kram: four days of sport, fitness, combat sports, gaming and e-sport.",
       "details": [
-        "Concept, set design and production of the launch space",
-        "Photo wall, product display and guest welcome",
-        "Content creation: reel, photos and stories"
+        "First edition, 6 to 9 November 2025, Parc des Expositions du Kram, Tunis",
+        "Three halls: combat sports and bodybuilding, fitness and group training, gaming and e-sport",
+        "Reels, stories and photo coverage of the festival for @tsf_2025"
       ],
       "links": [
         {
-          "label": "Story highlight: K Reine",
-          "url": "https://www.instagram.com/levelup.conseil/"
-        }
-      ],
-      "media": []
-    },
-    {
-      "id": "kreine-sun",
-      "title": "K-Reine · Sun care campaign",
-      "client": "K Reine",
-      "category": "Campaign",
-      "date": "2026",
-      "cover": "/data/events/kreine-sun.jpg",
-      "summary": "Outdoor shooting and campaign for the K-Reine sun care range.",
-      "details": [
-        "Art direction and product styling",
-        "Outdoor shooting",
-        "Social media campaign"
-      ],
-      "links": [
-        {
-          "label": "Story highlight: CAMPAGNE",
-          "url": "https://www.instagram.com/levelup.conseil/"
-        }
-      ],
-      "media": []
-    },
-    {
-      "id": "riviera-event",
-      "title": "Riviera · Event",
-      "client": "Riviera",
-      "category": "Corporate event",
-      "date": "2026",
-      "cover": "/data/events/riviera.jpg",
-      "summary": "Brand event for the ready-to-wear label Riviera.",
-      "details": [
-        "Event concept and coordination",
-        "Store dressing and signage",
-        "Reel and photo coverage"
-      ],
-      "links": [
-        {
-          "label": "Story highlight: Riviera",
-          "url": "https://www.instagram.com/levelup.conseil/"
-        }
-      ],
-      "media": []
-    },
-    {
-      "id": "kreine-event",
-      "title": "K-Reine · Event",
-      "client": "K Reine",
-      "category": "Corporate event",
-      "date": "2026",
-      "cover": "/data/events/kreine-event.jpg",
-      "summary": "Event production for K Reine.",
-      "details": [
-        "Event concept and coordination",
-        "On-site branding",
-        "Content coverage"
-      ],
-      "links": [
-        {
-          "label": "Story highlight: Évent KREINE",
-          "url": "https://www.instagram.com/levelup.conseil/"
-        }
-      ],
-      "media": []
-    },
-    {
-      "id": "ben-nasr-website",
-      "title": "Ben Nasr · Website launch",
-      "client": "Ben Nasr",
-      "category": "Launch",
-      "date": "2026",
-      "cover": "/data/events/ben-nasr.jpg",
-      "summary": "Launch of bennasr.com.tn for the jeweller and watchmaker Ben Nasr.",
-      "details": [
-        "Website design and development",
-        "Launch announcement content",
-        "Social media rollout"
-      ],
-      "links": [
-        {
-          "label": "Story highlight: WebsiteBenNasr",
+          "label": "Story highlight on Instagram",
           "url": "https://www.instagram.com/levelup.conseil/"
         },
         {
-          "label": "bennasr.com.tn",
-          "url": "https://www.bennasr.com.tn/"
+          "label": "@tsf_2025",
+          "url": "https://www.instagram.com/tsf_2025/"
         }
       ],
-      "media": []
+      "media": [
+        {
+          "type": "video",
+          "src": "/data/levelup/tsf.mp4",
+          "caption": "Tunisia Sports Festival · story"
+        }
+      ]
     },
     {
-      "id": "holistix",
-      "title": "Holistix · Brand content",
-      "client": "Holistix",
-      "category": "Campaign",
+      "id": "sky-padel",
+      "title": "Sky Padel",
+      "client": "Sky Padel",
+      "category": "Club launch",
       "date": "2026",
-      "cover": "/data/events/holistix.jpg",
-      "summary": "Content creation and campaign for the Holistix food-supplement brand.",
+      "cover": "/data/events/skypadel-cover.jpg",
+      "summary": "Teaser and launch content for the Sky Padel club, produced by Level Up Com.",
       "details": [
-        "Product shooting",
-        "Reels and stories",
-        "Campaign management"
+        "Cinematic teaser: 'Sometimes… coming soon'",
+        "Reels and stories for the club's Instagram launch",
+        "Sky Padel also hosted the first stage of the FTT padel circuit in March 2026"
       ],
       "links": [
         {
-          "label": "Story highlight: Holistix",
+          "label": "Story highlight on Instagram",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        },
+        {
+          "label": "@sky.padel_",
+          "url": "https://www.instagram.com/sky.padel_/"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "src": "/data/levelup/skypadel.mp4",
+          "caption": "Sky Padel · teaser"
+        }
+      ]
+    },
+    {
+      "id": "gymbox",
+      "title": "Gym Box",
+      "client": "Gym Box",
+      "category": "Fitness",
+      "date": "2026",
+      "cover": "/data/events/gymbox.jpg",
+      "summary": "Content creation for Gym Box, the Tunis fitness club network (Menzah 6, Menzah 1, Mohamed V, Jardins de Carthage, Grombalia).",
+      "details": [
+        "Shooting in the clubs: training floor, group classes and coaching",
+        "Reels and stories for the Gym Box community",
+        "Brand content for the club network"
+      ],
+      "links": [
+        {
+          "label": "Story highlight on Instagram",
           "url": "https://www.instagram.com/levelup.conseil/"
         }
       ],
       "media": []
     },
     {
-      "id": "godzilla-all-in-one",
-      "title": "Godzilla All In One · Shooting",
-      "client": "Level Up Com",
-      "category": "Shooting",
-      "date": "2026",
-      "cover": "/data/events/godzilla.jpg",
-      "summary": "Studio production and video shooting.",
+      "id": "riviera",
+      "title": "Riviera · La dolce Riviera collection",
+      "client": "Riviera",
+      "category": "Fashion",
+      "date": "June – July 2026",
+      "cover": "/data/events/riviera-collection.jpg",
+      "summary": "Shooting in Italy and campaign for the ready-to-wear label Riviera: 'La dolce Riviera collection'.",
       "details": [
-        "Studio setup and lighting",
-        "Video production",
-        "Post-production"
+        "Shooting in Italy, June 2026 (story highlight RivieraItaly)",
+        "Campaign reel 'La dolce Riviera collection', 8 July 2026",
+        "Store dressing, signage and content for the collection launch"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Reel: La dolce Riviera collection",
+          "url": "https://www.instagram.com/levelup.conseil/reel/Dai2k76Oecl/"
+        },
+        {
+          "label": "Story highlights Riviera & RivieraItaly",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "/data/events/riviera-collection.jpg",
+          "caption": "La dolce Riviera collection"
+        }
+      ]
+    },
+    {
+      "id": "sunset-pilates-brunch",
+      "title": "Sunset Pilates brunch",
+      "client": "Sunset Pilates",
+      "category": "Wellness event",
+      "date": "2026",
+      "cover": "/data/events/sunset-brunch.jpg",
+      "summary": "A pilates session at sunset followed by a brunch: event concept, coordination and content coverage by Level Up Com.",
+      "details": [
+        "Event concept and coordination",
+        "Set-up, welcome and brunch area",
+        "Reels, stories and photo coverage (story highlight 'Sunset brunch')"
+      ],
+      "links": [
+        {
+          "label": "Story highlight: Sunset brunch",
+          "url": "https://www.instagram.com/levelup.conseil/"
+        }
+      ],
       "media": []
     }
   ]
