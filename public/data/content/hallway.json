@@ -437,22 +437,68 @@
         {
           "title": "Real estate development",
           "body": "The Panthéon",
-          "icon": "building"
+          "icon": "building",
+          "image": "/data/clients/pantheon-card.jpg",
+          "imageAlt": "The Panthéon real estate development",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/levelup/pantheon.mp4",
+              "label": "The Panthéon"
+            }
+          ]
         },
         {
           "title": "Sport",
           "body": "TFS · GYM Boxe · Padel Connexion · Sunset Pilates · SKY Padel",
-          "icon": "sport"
+          "icon": "sport",
+          "image": "/data/clients/tsf-card.jpg",
+          "imageAlt": "Sport clients",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/levelup/tsf.mp4",
+              "label": "TFS"
+            },
+            {
+              "type": "video",
+              "src": "/data/levelup/padel.mp4",
+              "label": "Padel Connexion"
+            },
+            {
+              "type": "video",
+              "src": "/data/levelup/skypadel.mp4",
+              "label": "SKY Padel"
+            }
+          ]
         },
         {
           "title": "Food supplements",
           "body": "Holistix · Holigums",
-          "icon": "leaf"
+          "icon": "leaf",
+          "image": "/data/clients/holistix-card.jpg",
+          "imageAlt": "Holistix",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/clients/holistix-loop.mp4",
+              "label": "Holistix"
+            }
+          ]
         },
         {
           "title": "Restaurants",
           "body": "Secrito salon de thé",
-          "icon": "cup"
+          "icon": "cup",
+          "image": "/data/clients/secrito-card.jpg",
+          "imageAlt": "Secrito salon de thé",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/levelup/Secrito.mp4",
+              "label": "Secrito salon de thé"
+            }
+          ]
         },
         {
           "title": "Silverware",

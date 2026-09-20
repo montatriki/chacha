@@ -40,7 +40,7 @@ export function CardMedia({ items, className, drift = false, onLabel }: { items:
 
   const render = (m: Media, key: string, fading: boolean) =>
     m.type === "video" ? (
-      <video key={key} ref={fading ? undefined : videoRef} src={m.src} className={`absolute inset-0 h-full w-full object-cover ${className ?? ""}`} muted playsInline autoPlay preload="metadata" style={{ opacity: fading ? 0 : 1, transition: "opacity 900ms ease" }} />
+      <video key={key} ref={fading ? undefined : videoRef} src={m.src} className={`absolute inset-0 h-full w-full object-cover ${className ?? ""}`} muted playsInline autoPlay loop={items.length < 2} preload="metadata" style={{ opacity: fading ? 0 : 1, transition: "opacity 900ms ease" }} />
     ) : (
       <img key={key} src={m.src} alt={m.label ?? ""} className={`absolute inset-0 h-full w-full object-cover ${className ?? ""}`} style={{ opacity: fading ? 0 : 1, transition: "opacity 900ms ease", animation: drift ? "eventsBgDrift 14s ease-in-out infinite alternate" : undefined }} />
     );

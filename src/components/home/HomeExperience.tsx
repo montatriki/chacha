@@ -336,17 +336,21 @@ export function HomeExperience() {
             aria-hidden
           />
           <div className="relative flex flex-col items-center" style={{ animation: "readyGateIn 0.9s ease-out both" }}>
-            <img src={SITE.logoOnDark} alt={SITE.name} className="mb-10 w-[min(72vw,340px)]" />
-            <p
-              className="mb-10 max-w-sm text-center text-[clamp(1.15rem,3.5vw,1.55rem)] font-medium tracking-[0.02em] text-[#ffffff]"
-              style={{ fontFamily: 'Poppins, Montserrat, sans-serif', textShadow: "0 2px 20px rgba(0,0,0,0.45)" }}
-            >
-              {COPY.readyGate.line}
-            </p>
+            <img src={SITE.logoOnDark} alt={SITE.name} style={{ width: portrait ? "min(86vw, 420px)" : "min(56vw, 640px)", marginBottom: portrait ? 34 : 44, filter: "drop-shadow(0 0 28px rgba(37,99,235,0.35))" }} />
+            <div className="relative flex w-full items-center justify-center" style={{ maxWidth: portrait ? "100%" : "52rem", gap: portrait ? 10 : 18, padding: "0 8px", marginBottom: portrait ? 34 : 40 }} aria-label={COPY.readyGate.line}>
+              {!portrait && <span className="diamond-rule" aria-hidden />}
+              <p className="diamond-text relative text-center" style={{ fontSize: portrait ? "clamp(1.75rem, 8vw, 2.3rem)" : "clamp(1.8rem, 3.2vw, 3rem)", maxWidth: portrait ? "16ch" : "22ch", padding: "0.2em 0.35em", textWrap: "balance" }}>
+                {COPY.readyGate.line}
+                <span className="diamond-spark" style={{ left: "-14px", top: "10%", animationDelay: "0s" }} aria-hidden />
+                <span className="diamond-spark" style={{ right: "-12px", bottom: "8%", animationDelay: "1.1s" }} aria-hidden />
+                <span className="diamond-spark" style={{ right: "12%", top: "-16px", animationDelay: "2.2s", width: 7, height: 7 }} aria-hidden />
+              </p>
+              {!portrait && <span className="diamond-rule" aria-hidden />}
+            </div>
             <button
               type="button"
               onClick={enterExperience}
-              className="aradi-silver-lining touch-manipulation border-0 px-8 py-3.5 text-[11px] tracking-[0.38em] text-[#ffffff] uppercase transition active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2563eb]"
+              className="aradi-silver-lining touch-manipulation border-0 px-9 py-4 text-[12px] tracking-[0.34em] text-[#ffffff] uppercase transition active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2563eb] md:px-8 md:py-3.5 md:text-[11px] md:tracking-[0.38em]"
               style={{
                 fontFamily: 'Poppins, Montserrat, sans-serif',
                 fontWeight: 500,
