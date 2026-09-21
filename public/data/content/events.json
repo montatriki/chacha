@@ -90,20 +90,42 @@
       "client": "Gym Box",
       "category": "Fitness",
       "date": "2026",
-      "cover": "/data/events/gymbox.jpg",
-      "summary": "Content creation for Gym Box, the Tunis fitness club network (Menzah 6, Menzah 1, Mohamed V, Jardins de Carthage, Grombalia).",
+      "cover": "/data/posters/gymbox-experience.jpg",
+      "summary": "Content creation for Gym Box, the Tunis fitness club network (Menzah 6, Menzah 1, Mohamed V, Jardins de Carthage, Grombalia): clubs, Pilates studio and events.",
       "details": [
-        "Shooting in the clubs: training floor, group classes and coaching",
-        "Reels and stories for the Gym Box community",
-        "Brand content for the club network"
+        "Club experience reel: premium equipment, coaching, pool and spa (March 2026)",
+        "Pilates Studio: Reformer, Tower and Chair sessions (August 2026)",
+        "Fit & Luxe Experience and club events content",
+        "Reels shown here are from the club's Instagram; tell us which ones Level Up produced"
       ],
       "links": [
         {
-          "label": "Story highlight on Instagram",
-          "url": "https://www.instagram.com/levelup.conseil/"
+          "label": "@gym_box_officiel",
+          "url": "https://www.instagram.com/gym_box_officiel/"
+        },
+        {
+          "label": "@gym_box_pilates",
+          "url": "https://www.instagram.com/gym_box_pilates/"
+        },
+        {
+          "label": "@gym_box_menzah_1",
+          "url": "https://www.instagram.com/gym_box_menzah_1/"
         }
       ],
-      "media": []
+      "media": [
+        {
+          "type": "video",
+          "src": "/data/events/gymbox-experience.mp4",
+          "poster": "/data/posters/gymbox-experience.jpg",
+          "caption": "Gym Box · the club experience (reel @gym_box_pilates)"
+        },
+        {
+          "type": "video",
+          "src": "/data/events/gymbox-pilates.mp4",
+          "poster": "/data/posters/gymbox-pilates.jpg",
+          "caption": "Gym Box · Pilates Studio (reel @gym_box_pilates)"
+        }
+      ]
     },
     {
       "id": "riviera",
@@ -156,8 +178,9 @@
       "summary": "A pilates session at sunset followed by a brunch: event concept, coordination and content coverage by Level Up Com.",
       "details": [
         "Event concept and coordination",
-        "Set-up, welcome and brunch area",
-        "Reels, stories and photo coverage (story highlight 'Sunset brunch')"
+        "Set-up, welcome and brunch area at golden hour",
+        "Reels, stories and photo coverage (story highlight 'Sunset brunch')",
+        "Event photos to come from the Instagram highlight"
       ],
       "links": [
         {
@@ -165,7 +188,13 @@
           "url": "https://www.instagram.com/levelup.conseil/"
         }
       ],
-      "media": []
+      "media": [
+        {
+          "type": "image",
+          "src": "/data/events/sunset-brunch.jpg",
+          "caption": "Sunset Pilates brunch · visual"
+        }
+      ]
     },
     {
       "id": "holigums-campaign",
