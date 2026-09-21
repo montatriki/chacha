@@ -12,6 +12,7 @@ import { FrameProjection } from "./FrameProjection";
 import { HallwayOverlay, type ProjectionOrigin } from "./HallwayOverlay";
 import { JourneyOverlay } from "./JourneyOverlay";
 import { Preloader } from "./Preloader";
+import { DiamondField } from "./DiamondField";
 import { EventsRoom } from "./EventsRoom";
 import { AboutRoom } from "./AboutRoom";
 import { Finale } from "./Finale";
@@ -335,6 +336,8 @@ export function HomeExperience() {
             style={{ background: "radial-gradient(ellipse 55% 45% at 50% 42%, rgba(37,99,235,0.55) 0%, transparent 70%)" }}
             aria-hidden
           />
+          {/* brilliant sparkles across the whole gate (fewer on phones) */}
+          {!reducedMotion && <DiamondField count={portrait ? 32 : 64} seed={portrait ? 11 : 7} className="z-0" />}
           <div className="relative flex flex-col items-center" style={{ animation: "readyGateIn 0.9s ease-out both" }}>
             <img src={SITE.logoOnDark} alt={SITE.name} style={{ width: portrait ? "min(86vw, 420px)" : "min(56vw, 640px)", marginBottom: portrait ? 34 : 44, filter: "drop-shadow(0 0 28px rgba(37,99,235,0.35))" }} />
             <div className="relative flex w-full items-center justify-center" style={{ maxWidth: portrait ? "100%" : "52rem", gap: portrait ? 10 : 18, padding: "0 8px", marginBottom: portrait ? 34 : 40 }} aria-label={COPY.readyGate.line}>
@@ -344,6 +347,9 @@ export function HomeExperience() {
                 <span className="diamond-spark" style={{ left: "-14px", top: "10%", animationDelay: "0s" }} aria-hidden />
                 <span className="diamond-spark" style={{ right: "-12px", bottom: "8%", animationDelay: "1.1s" }} aria-hidden />
                 <span className="diamond-spark" style={{ right: "12%", top: "-16px", animationDelay: "2.2s", width: 7, height: 7 }} aria-hidden />
+                <span className="diamond-spark" style={{ left: "18%", bottom: "-14px", animationDelay: "1.7s", width: 6, height: 6 }} aria-hidden />
+                <span className="diamond-spark" style={{ left: "46%", top: "-22px", animationDelay: "0.6s", width: 8, height: 8 }} aria-hidden />
+                <span className="diamond-spark" style={{ right: "-26px", top: "46%", animationDelay: "2.9s", width: 5, height: 5 }} aria-hidden />
               </p>
               {!portrait && <span className="diamond-rule" aria-hidden />}
             </div>
