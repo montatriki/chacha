@@ -84,7 +84,8 @@ export function MediaDetail({
             </div>
           )}
           {item?.caption && !failed[item.src] && (
-            <p className="pointer-events-none absolute left-0 right-0 top-0 px-4 py-3 text-white/85" style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", background: "linear-gradient(180deg, rgba(5,9,26,0.75), transparent)" }}>{item.caption}</p>
+            /* phones: the site logo sits over the top-left corner, so the caption goes above the dots instead */
+            <p className="pointer-events-none absolute left-0 right-0 px-4 py-3 text-white/85" style={portrait ? { bottom: 14, fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", background: "linear-gradient(0deg, rgba(5,9,26,0.75), transparent)" } : { top: 0, fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", background: "linear-gradient(180deg, rgba(5,9,26,0.75), transparent)" }}>{item.caption}</p>
           )}
           {gallery.length > 1 && (
             <>
