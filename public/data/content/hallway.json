@@ -494,7 +494,15 @@
         {
           "title": "Ready-to-wear",
           "body": "Riviera · 5Progress",
-          "icon": "hanger"
+          "icon": "hanger",
+          "image": "/data/events/riviera-dolce-cover.jpg",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/events/riviera-dolce.mp4",
+              "label": "Riviera · La Dolce Riviera"
+            }
+          ]
         },
         {
           "title": "Silverware",

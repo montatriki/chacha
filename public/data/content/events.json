@@ -109,14 +109,18 @@
       "client": "Riviera",
       "category": "Fashion",
       "date": "June – July 2026",
-      "cover": "/data/events/riviera-collection.jpg",
-      "summary": "Shooting in Italy and campaign for the ready-to-wear label Riviera: 'La dolce Riviera collection'.",
+      "cover": "/data/events/riviera-dolce-cover.jpg",
+      "summary": "'Un avant-goût de La Dolce Riviera… Le soleil, la mer, le mouvement.' Shooting in Italy and campaign for the ready-to-wear label Riviera.",
       "details": [
         "Shooting in Italy, June 2026 (story highlight RivieraItaly)",
         "Campaign reel 'La dolce Riviera collection', 8 July 2026",
         "Store dressing, signage and content for the collection launch"
       ],
       "links": [
+        {
+          "label": "Reel: La Dolce Riviera teaser",
+          "url": "https://www.instagram.com/reels/DagPCJkt3_I/"
+        },
         {
           "label": "Reel: La dolce Riviera collection",
           "url": "https://www.instagram.com/levelup.conseil/reel/Dai2k76Oecl/"
@@ -127,6 +131,11 @@
         }
       ],
       "media": [
+        {
+          "type": "video",
+          "src": "/data/events/riviera-dolce.mp4",
+          "caption": "La Dolce Riviera · teaser (reel with Hend Makni, 7 July 2026)"
+        },
         {
           "type": "image",
           "src": "/data/events/riviera-collection.jpg",
