@@ -313,36 +313,227 @@
         {
           "title": "websites & e-commerce websites",
           "body": "Brand sites and online stores, designed and built to order.",
-          "icon": "globe"
+          "icon": "globe",
+          "kicker": "Service 01 · Websites & e-commerce",
+          "description": "Brand sites and online stores designed and built to order: fast, elegant, mobile-first, and connected to your payments, catalogue and analytics.",
+          "details": [
+            "Design system in your brand colours and typography",
+            "Showcase sites, e-commerce stores and landing pages",
+            "Hosting, domain, SSL and maintenance included",
+            "Reference: bennasr.com.tn, launched May 2026 for the jeweller Ben Nasr"
+          ],
+          "links": [
+            {
+              "label": "bennasr.com.tn",
+              "url": "https://www.bennasr.com.tn/"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/services/websites.jpg",
+              "label": "Websites & e-commerce"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-card.jpg",
+              "label": "Ben Nasr · website launch"
+            }
+          ]
         },
         {
           "title": "Advertising campaigns & Corporate events",
           "body": "Planning and management of multi-channel advertising campaigns. End-to-end organisation of company events.",
-          "icon": "megaphone"
+          "icon": "megaphone",
+          "kicker": "Service 02 · Advertising campaigns & corporate events",
+          "description": "Planning and management of multi-channel advertising campaigns, and end-to-end organisation of company events: concept, set design, production, guests and content.",
+          "details": [
+            "Media planning: Instagram, Facebook, TikTok, Google, out-of-home",
+            "Creative direction, production and reporting",
+            "Product launches, activations, festivals and corporate evenings",
+            "References: Tunisia Sports Festival, K Reine events, Holigums campaign"
+          ],
+          "links": [
+            {
+              "label": "Our events",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/events/tsf-poster.jpg",
+              "label": "Tunisia Sports Festival · campaign"
+            },
+            {
+              "type": "video",
+              "src": "/data/levelup/k.mp4",
+              "label": "K Reine · event reel",
+              "poster": "/data/posters/k.jpg"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/holigums-anti-stress.jpg",
+              "label": "Holigums · campaign"
+            },
+            {
+              "type": "video",
+              "src": "/data/levelup/tsf.mp4",
+              "label": "Tunisia Sports Festival · story",
+              "poster": "/data/posters/tsf.jpg"
+            }
+          ]
         },
         {
           "title": "SEO & search ranking",
           "body": "Organic and paid search to build lasting visibility.",
-          "icon": "search"
+          "icon": "search",
+          "kicker": "Service 03 · SEO & search ranking",
+          "description": "Organic and paid search to build lasting visibility: technical audit, content, local SEO and Google Ads, measured every month.",
+          "details": [
+            "Technical SEO audit and site speed",
+            "Keyword strategy and content writing",
+            "Google Business Profile and local search",
+            "Google Ads campaigns with monthly reporting"
+          ],
+          "links": [
+            {
+              "label": "Talk to us on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/services/seo.jpg",
+              "label": "SEO & search ranking"
+            }
+          ]
         },
         {
           "title": "Instagram campaign management && UGC",
           "body": "Authentic content made by creators for your brands.",
-          "icon": "camera"
+          "icon": "camera",
+          "kicker": "Service 04 · Instagram campaign management & UGC",
+          "description": "We run your Instagram: editorial calendar, reels, stories and paid campaigns, plus authentic content made by creators for your brand.",
+          "details": [
+            "Monthly content calendar, captions and hashtags",
+            "Reels, stories and carousels shot and edited by our team",
+            "UGC: creators and influencers matched to your audience",
+            "Community management and paid boosts"
+          ],
+          "links": [
+            {
+              "label": "@levelup.conseil",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/events/riviera-dolce.mp4",
+              "label": "La Dolce Riviera · reel",
+              "poster": "/data/posters/riviera-dolce.jpg"
+            },
+            {
+              "type": "video",
+              "src": "/data/clients/holistix-loop.mp4",
+              "label": "Holistix · reel",
+              "poster": "/data/posters/holistix-loop.jpg"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/holigums-beauty-boost.jpg",
+              "label": "Holigums · Instagram campaign"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/table-espace-champagne.jpg",
+              "label": "Tabl'espace · Instagram content"
+            }
+          ]
         },
         {
           "title": " shooting && branding",
           "body": "Dressing and staging of your retail spaces.",
-          "icon": "store"
+          "icon": "store",
+          "kicker": "Service 05 · Shooting & branding",
+          "description": "Photo and video shooting with our art director, and branding that gives your brand a face: logo, identity, packaging and store dressing.",
+          "details": [
+            "Studio and on-location photo and video shoots",
+            "Art direction by Angela Marcato",
+            "Logo, visual identity and brand guidelines",
+            "Store dressing, signage and staging of your retail spaces"
+          ],
+          "links": [
+            {
+              "label": "Our shootings",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/couture-green-shoot.jpg",
+              "label": "Editorial shooting · haute couture"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-ice-cream.jpg",
+              "label": "Ben Nasr · jewellery campaign"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/ben-nasr-scarf.jpg",
+              "label": "Ben Nasr · jewellery campaign"
+            },
+            {
+              "type": "image",
+              "src": "/data/events/riviera-dolce-cover.jpg",
+              "label": "La Dolce Riviera · shooting in Italy"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/table-espace-cutlery.jpg",
+              "label": "Tabl'espace · product shooting"
+            }
+          ]
         },
         {
           "title": "Display units & Exhibition stands",
           "body": "Made-to-measure displays that put your products forward. Trade-show stands designed, built and installed for your events.",
-          "icon": "display"
+          "icon": "display",
+          "kicker": "Service 06 · Display units & exhibition stands",
+          "description": "Made-to-measure displays that put your products forward, and trade-show stands designed, built and installed for your brand.",
+          "details": [
+            "Point-of-sale displays, counters and product presenters",
+            "Exhibition stands: design, 3D preview, build and installation",
+            "Signage, lightboxes and branded furniture",
+            "Event set design and photo walls"
+          ],
+          "links": [
+            {
+              "label": "Ask for a quote on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/services/exhibition-stand.jpg",
+              "label": "Exhibition stand"
+            },
+            {
+              "type": "image",
+              "src": "/data/services/display-units.jpg",
+              "label": "Display units"
+            }
+          ]
         }
       ],
       "title": "Everything your brand needs to LEVELUP.",
-      "tagline": "Amplify your impact wiith LEVELUP"
+      "tagline": "Amplify your impact wiith LEVELUP",
+      "openLabel": "View service"
     },
     "how": {
       "id": "how",
@@ -537,7 +728,7 @@
           ]
         },
         {
-          "title": "Food supplements",
+          "title": "Dietary supplement ",
           "body": "Holistix · Holigums",
           "icon": "leaf",
           "image": "/data/clients/holigums-anti-stress.jpg",
@@ -565,7 +756,7 @@
               "poster": "/data/posters/holistix-loop.jpg"
             }
           ],
-          "kicker": "Food supplements · Holistix · Holigums",
+          "kicker": "Dietary supplement  · Holistix · Holigums",
           "description": "Product campaign for the Holigums range by Holistix, shot at the Hôtel Particulier La Marsa, plus expert video content.",
           "details": [
             "Holigums Anti Stress, Beauty Boost and Multivitamins for kids: colour-coded sets",
