@@ -708,16 +708,40 @@
           "title": "Hotels",
           "body": "Carthage Thalasso Gammarth",
           "icon": "hotel",
-          "kicker": "Hotels · Carthage Thalasso Gammarth",
-          "description": "Content and communication for the Carthage Thalasso resort in Gammarth.",
+          "kicker": "Hotels · Carthage Thalasso Resort, Gammarth",
+          "description": "Video content for the Carthage Thalasso Resort in Gammarth: the resort as the main venue of the Tunisia Bachata Festival 2026, and its outdoor pool and day pass.",
           "details": [
-            "Hotel and spa content",
-            "Social media communication"
+            "Venue reveal reel for the Tunisia Bachata Festival 2026 (September 2025)",
+            "Outdoor pool reel: open 10:00 to 18:00, day pass 85 DT adult / 55 DT child (July 2025)",
+            "Hotel, spa and pool content for social media"
           ],
           "links": [
             {
-              "label": "Posts on Instagram",
-              "url": "https://www.instagram.com/levelup.conseil/"
+              "label": "@carthage_thalasso_resort",
+              "url": "https://www.instagram.com/carthage_thalasso_resort/"
+            },
+            {
+              "label": "Reel: festival venue",
+              "url": "https://www.instagram.com/reels/DPMePX2jEH6/"
+            },
+            {
+              "label": "Reel: outdoor pool",
+              "url": "https://www.instagram.com/reels/DMGcYRaIfNq/"
+            }
+          ],
+          "image": "/data/posters/carthage-thalasso-bachata.jpg",
+          "media": [
+            {
+              "type": "video",
+              "src": "/data/clients/carthage-thalasso-bachata.mp4",
+              "poster": "/data/posters/carthage-thalasso-bachata.jpg",
+              "label": "Carthage Thalasso Resort · Tunisia Bachata Festival 2026 venue"
+            },
+            {
+              "type": "video",
+              "src": "/data/clients/carthage-thalasso-pool.mp4",
+              "poster": "/data/posters/carthage-thalasso-pool.jpg",
+              "label": "Carthage Thalasso Resort · outdoor pool"
             }
           ]
         },
