@@ -507,7 +507,20 @@
         {
           "title": "Silverware",
           "body": "Table Espace",
-          "icon": "silver"
+          "icon": "silver",
+          "image": "/data/clients/table-espace-champagne.jpg",
+          "media": [
+            {
+              "type": "image",
+              "src": "/data/clients/table-espace-champagne.jpg",
+              "label": "Tabl'espace · silver details"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/table-espace-cutlery.jpg",
+              "label": "Tabl'espace · élégance, détails et chic intemporel"
+            }
+          ]
         },
         {
           "title": "Restaurants && Coffee",
