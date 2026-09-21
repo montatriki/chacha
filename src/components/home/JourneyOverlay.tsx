@@ -28,17 +28,17 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     const head = headRef.current;
     const body = bodyRef.current;
     const services = servicesRef.current;
-    if (!root || !eyebrow || !head || !body || !services) return;
+    if (!root || !eyebrow || !head || !body) return;
     gsap.set(root, { opacity: 1 });
     gsap.set([eyebrow, head, body], { opacity: 0, x: -28, y: 0 });
     // the handwritten line is "signed" in: fades up while its letters slide from the left
-    gsap.set(services, { opacity: 0, x: -40, y: 0, clipPath: "inset(0 100% 0 0)" });
+    if (services) gsap.set(services, { opacity: 0, x: -40, y: 0, clipPath: "inset(0 100% 0 0)" });
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
     tl.to(eyebrow, { opacity: 1, x: 0, duration: 0.7 }, 0)
       .to(head, { opacity: 1, x: 0, duration: 0.85 }, 0.12)
-      .to(body, { opacity: 1, x: 0, duration: 0.8 }, 0.28)
-      .to(services, { opacity: 1, x: 0, clipPath: "inset(0 0% 0 0)", duration: 1.4, ease: "power1.inOut" }, 0.55)
-      .to(root, { opacity: 0, y: -12, duration: 0.7, ease: "power2.in" }, HOLD_MS / 1000);
+      .to(body, { opacity: 1, x: 0, duration: 0.8 }, 0.28);
+    if (services) tl.to(services, { opacity: 1, x: 0, clipPath: "inset(0 0% 0 0)", duration: 1.4, ease: "power1.inOut" }, 0.55);
+    tl.to(root, { opacity: 0, y: -12, duration: 0.7, ease: "power2.in" }, HOLD_MS / 1000);
     const start = performance.now();
     let raf = 0;
     const drift = () => {
@@ -48,7 +48,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         gsap.set(eyebrow, { y: d * 0.25 });
         gsap.set(head, { y: d * 0.55, x: d * -0.08 });
         gsap.set(body, { y: d * 0.85 });
-        gsap.set(services, { y: d * 1.05 });
+        if (services) gsap.set(services, { y: d * 1.05 });
       }
       void videoRef.current;
       raf = requestAnimationFrame(drift);
@@ -70,11 +70,11 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         <h2 ref={headRef} className="mb-4 font-medium leading-[1.08] text-white" style={{ fontSize: narrow ? "clamp(1.9rem, 8.5vw, 2.6rem)" : "clamp(1.75rem, 4.2vw, 3.4rem)" }}>
           {COPY.journey.headline}
         </h2>
-        <p ref={bodyRef} className="max-w-sm leading-relaxed text-white/70" style={{ fontSize: narrow ? 14 : 16 }}>
+        <p ref={bodyRef} className="leading-relaxed text-white/80" style={{ fontSize: narrow ? 14 : 16, letterSpacing: "0.04em" }}>
           {COPY.journey.body}
         </p>
-        {/* Services, hand-written like the Instagram "Elevate your brand. Amplify your impact." visual */}
-        <p
+        {/* Optional hand-written line (copy.journey.services); empty = not rendered */}
+        {COPY.journey.services && <p
           ref={servicesRef}
           className="journey-script mt-4"
           style={{
@@ -85,7 +85,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
           }}
         >
           {COPY.journey.services}
-        </p>
+        </p>}
       </div>
     </div>
   );
