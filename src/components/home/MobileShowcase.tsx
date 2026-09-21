@@ -12,7 +12,7 @@ const AUTOPLAY_MS = 4200;
  * hallway show through. Auto-advances with a progress bar, pauses while the user touches it,
  * supports swipe and taps on the dots.
  */
-export function MobileShowcase({ blocks, gold = GOLD }: { blocks: ProjectionBlock[]; gold?: string }) {
+export function MobileShowcase({ blocks, gold = GOLD, onOpen, openLabel = "View" }: { blocks: ProjectionBlock[]; gold?: string; onOpen?: (block: ProjectionBlock) => void; openLabel?: string }) {
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const [paused, setPaused] = useState(false);
@@ -85,6 +85,18 @@ export function MobileShowcase({ blocks, gold = GOLD }: { blocks: ProjectionBloc
           <h3 className="mt-2 text-white" style={{ fontSize: "clamp(24px, 6.5vw, 30px)", lineHeight: 1.12, fontWeight: 600, letterSpacing: "-0.01em", textShadow: "0 2px 20px rgba(0,0,0,0.5)", animation: "eventsRise 0.7s ease-out 0.32s both" }}>{block.title}</h3>
           <span aria-hidden className="mt-3 block h-px w-10" style={{ background: `linear-gradient(90deg, ${gold}, transparent)`, animation: "eventsRise 0.7s ease-out 0.38s both" }} />
           <p className="mt-3 text-white" style={{ fontSize: 15.5, lineHeight: 1.6, opacity: 0.92, animation: "eventsRise 0.7s ease-out 0.45s both" }}>{block.body}</p>
+          {onOpen && (
+            <button
+              type="button"
+              onClick={() => onOpen(block)}
+              className="mt-4 inline-flex items-center gap-2 self-start font-semibold uppercase"
+              style={{ fontSize: 11, letterSpacing: "0.28em", color: gold, padding: "10px 16px", borderRadius: 999, border: `1px solid rgba(231,201,138,0.55)`, background: "rgba(10,15,31,0.55)", animation: "eventsRise 0.7s ease-out 0.5s both" }}
+              aria-label={`${openLabel}: ${block.title}`}
+            >
+              {openLabel}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
+          )}
         </div>
 
         {/* progress bar */}

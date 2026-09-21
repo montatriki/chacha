@@ -393,6 +393,23 @@
               "src": "/data/levelup/k.mp4",
               "label": "K Reine"
             }
+          ],
+          "kicker": "Cosmetics · Happyness by Djoya · K Reine",
+          "description": "Beauty and cosmetics brands: launch events, campaigns and content for K Reine and Happyness by Djoya.",
+          "details": [
+            "K Reine · Glow Kiss launch event with a lips-themed photo wall",
+            "K Reine · Summer event and sun care campaign (July 2026)",
+            "Happyness by Djoya · product visuals and social content"
+          ],
+          "links": [
+            {
+              "label": "@k_reine_official",
+              "url": "https://www.instagram.com/k_reine_official/"
+            },
+            {
+              "label": "Reel: Summer K Reine event",
+              "url": "https://www.instagram.com/levelup.conseil/reel/DabDCTEOnmQ/"
+            }
           ]
         },
         {
@@ -417,6 +434,23 @@
               "src": "/data/clients/ben-nasr-card.jpg",
               "label": "Ben Nasr"
             }
+          ],
+          "kicker": "Jewellery · Ben Nasr · Aslam Fakhkah",
+          "description": "Jewellery campaign shooting and website launch for the jeweller and watchmaker Ben Nasr.",
+          "details": [
+            "Jewellery campaign shooting: ice-cream cone and silk scarf series (July 2025)",
+            "Website design and launch: bennasr.com.tn (May 2026)",
+            "Storefront and product content for social media"
+          ],
+          "links": [
+            {
+              "label": "bennasr.com.tn",
+              "url": "https://www.bennasr.com.tn/"
+            },
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
           ]
         },
         {
@@ -430,6 +464,18 @@
               "type": "video",
               "src": "/data/levelup/pantheon.mp4",
               "label": "The Panthéon"
+            }
+          ],
+          "kicker": "Real estate · The Panthéon",
+          "description": "Video content for The Panthéon real estate development project.",
+          "details": [
+            "Presenter-led project video on site",
+            "Reels and stories for the project launch"
+          ],
+          "links": [
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
             }
           ]
         },
@@ -460,6 +506,29 @@
               "src": "/data/levelup/skypadel.mp4",
               "label": "SKY Padel"
             }
+          ],
+          "kicker": "Sport · TSF · Gym Boxe · Padel Connexion · Sunset Pilates · Sky Padel",
+          "description": "Sport clubs and events: festival coverage, club launches and content for the padel, fitness and pilates community.",
+          "details": [
+            "Tunisia Sports Festival (TSF) · coverage of the first edition, Kram, November 2025",
+            "Sky Padel · cinematic teaser and launch content",
+            "Padel Connexion · reels with the club and its players",
+            "Gym Boxe · club content",
+            "Sunset Pilates · Sunset Pilates brunch event"
+          ],
+          "links": [
+            {
+              "label": "@tsf_2025",
+              "url": "https://www.instagram.com/tsf_2025/"
+            },
+            {
+              "label": "@sky.padel_",
+              "url": "https://www.instagram.com/sky.padel_/"
+            },
+            {
+              "label": "@padelconnection",
+              "url": "https://www.instagram.com/padelconnection/"
+            }
           ]
         },
         {
@@ -489,6 +558,23 @@
               "src": "/data/clients/holistix-loop.mp4",
               "label": "Holistix"
             }
+          ],
+          "kicker": "Food supplements · Holistix · Holigums",
+          "description": "Product campaign for the Holigums range by Holistix, shot at the Hôtel Particulier La Marsa, plus expert video content.",
+          "details": [
+            "Holigums Anti Stress, Beauty Boost and Multivitamins for kids: colour-coded sets",
+            "Art direction Angela Marcato · photography Mohamed Cherni",
+            "Nutrition advice videos with Dr Fatma Baccar and Dr Jemila Ghanouchi (Ramadan series)"
+          ],
+          "links": [
+            {
+              "label": "@holigums",
+              "url": "https://www.instagram.com/holigums/"
+            },
+            {
+              "label": "@holistix_health",
+              "url": "https://www.instagram.com/holistix_health/"
+            }
           ]
         },
         {
@@ -501,6 +587,23 @@
               "type": "video",
               "src": "/data/events/riviera-dolce.mp4",
               "label": "Riviera · La Dolce Riviera"
+            }
+          ],
+          "kicker": "Ready-to-wear · Riviera · 5Progress",
+          "description": "'Un avant-goût de La Dolce Riviera… Le soleil, la mer, le mouvement.' Shooting in Italy and campaign for the ready-to-wear label Riviera.",
+          "details": [
+            "Shooting in Italy, June 2026",
+            "Teaser and campaign reels for La Dolce Riviera collection (July 2026)",
+            "5Progress · brand content"
+          ],
+          "links": [
+            {
+              "label": "Reel: La Dolce Riviera teaser",
+              "url": "https://www.instagram.com/reels/DagPCJkt3_I/"
+            },
+            {
+              "label": "Reel: La dolce Riviera collection",
+              "url": "https://www.instagram.com/levelup.conseil/reel/Dai2k76Oecl/"
             }
           ]
         },
@@ -520,6 +623,26 @@
               "src": "/data/clients/table-espace-cutlery.jpg",
               "label": "Tabl'espace · élégance, détails et chic intemporel"
             }
+          ],
+          "kicker": "Silverware · Tabl'espace",
+          "description": "Silver tableware content for Tabl'espace: trays, cutlery and champagne moments, styled for social media.",
+          "details": [
+            "Silver details series (December 2025)",
+            "'Élégance, détails et chic intemporel' (January 2026)"
+          ],
+          "links": [
+            {
+              "label": "@tablespace_",
+              "url": "https://www.instagram.com/tablespace_/"
+            },
+            {
+              "label": "Post: silver details",
+              "url": "https://www.instagram.com/p/DS3EychDsRd/"
+            },
+            {
+              "label": "Post: élégance et chic intemporel",
+              "url": "https://www.instagram.com/p/DTVQaboDN4m/"
+            }
           ]
         },
         {
@@ -534,6 +657,18 @@
               "src": "/data/levelup/Secrito.mp4",
               "label": "Secrito salon de thé"
             }
+          ],
+          "kicker": "Restaurants & coffee · Secrito salon de thé",
+          "description": "Food and atmosphere video content for the Secrito salon de thé.",
+          "details": [
+            "Reels: pastries, drinks and the tea room",
+            "Social media content"
+          ],
+          "links": [
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
           ]
         },
         {
@@ -547,12 +682,36 @@
               "src": "/data/clients/couture-green-shoot.jpg",
               "label": "Haute couture shooting"
             }
+          ],
+          "kicker": "Haute couture · Faouizia Frad",
+          "description": "Editorial shooting for the couture designer Faouizia Frad.",
+          "details": [
+            "Studio shooting with painted backdrop",
+            "Campaign visuals and stories"
+          ],
+          "links": [
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
           ]
         },
         {
           "title": "Hotels",
           "body": "Carthage Thalasso Gammarth",
-          "icon": "hotel"
+          "icon": "hotel",
+          "kicker": "Hotels · Carthage Thalasso Gammarth",
+          "description": "Content and communication for the Carthage Thalasso resort in Gammarth.",
+          "details": [
+            "Hotel and spa content",
+            "Social media communication"
+          ],
+          "links": [
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
+          ]
         },
         {
           "title": "Industry",
@@ -565,9 +724,22 @@
               "src": "/data/clients/soquibat-logo.png",
               "label": "Groupe Soquibat"
             }
+          ],
+          "kicker": "Industry · Groupe Soquibat",
+          "description": "Corporate communication for Groupe Soquibat.",
+          "details": [
+            "Brand and corporate content",
+            "Digital communication"
+          ],
+          "links": [
+            {
+              "label": "Posts on Instagram",
+              "url": "https://www.instagram.com/levelup.conseil/"
+            }
           ]
         }
-      ]
+      ],
+      "openLabel": "View client"
     }
   },
   "mobileCards": {

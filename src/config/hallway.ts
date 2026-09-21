@@ -151,6 +151,12 @@ export interface ProjectionBlock {
   imageAlt?: string;
   /** Optional rotating media (photos / muted videos) shown in the banner, cycling automatically. */
   media?: CardMedia[];
+  /** Optional detail sheet content (opened by clicking the card): longer text, bullet points, links. */
+  description?: string;
+  details?: string[];
+  links?: { label: string; url: string }[];
+  /** Small caption for the detail eyebrow (e.g. the sector); defaults to the panel eyebrow. */
+  kicker?: string;
 }
 
 export interface ProjectionContent {
@@ -163,6 +169,8 @@ export interface ProjectionContent {
   tagline?: string;
   /** Optional per-panel label for the close button (defaults to "Close"). */
   closeLabel?: string;
+  /** Label of the "open detail" action on cards (defaults to "View"). */
+  openLabel?: string;
   /** Reserved for future panel variants; present in content JSON. */
   layout?: string;
 }

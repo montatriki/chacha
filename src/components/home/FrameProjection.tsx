@@ -1,11 +1,12 @@
 "use client";
-import { useEffect, useId, useMemo, useRef, type CSSProperties, type RefObject } from "react";
-import { PROJECTIONS, type HallwayLayout, type ProjectionId } from "@/config/hallway";
+import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type RefObject } from "react";
+import { PROJECTIONS, type HallwayLayout, type ProjectionBlock, type ProjectionId } from "@/config/hallway";
 import { useVideoCover, type FitMode } from "@/hooks/useVideoCover";
 import { track } from "@/lib/analytics";
 import { ServiceIcon } from "./ServiceIcon";
 import { MobileShowcase } from "./MobileShowcase";
 import { CardMedia } from "./CardMedia";
+import { MediaDetail } from "./MediaDetail";
 
 const angleBetween = (x1: number, y1: number, x2: number, y2: number) => (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI;
 const distance = (x1: number, y1: number, x2: number, y2: number) => Math.hypot(x2 - x1, y2 - y1);
@@ -32,7 +33,14 @@ export function FrameProjection({
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const guardUntil = useRef(0);
   const content = projectionId ? (PROJECTIONS[projectionId] ?? null) : null;
+  // Card detail sheet (Clients panel): the block whose photos / reels / description are open.
+  const [activeBlock, setActiveBlock] = useState<ProjectionBlock | null>(null);
+  const activeRef = useRef<ProjectionBlock | null>(null);
+  activeRef.current = activeBlock;
   const { toScreen, cover } = useVideoCover(containerRef, 16 / 9, 0.5, 0.5, fitMode, fitPad);
+
+  // Cards open a detail sheet only on panels whose blocks carry photos, reels or a description.
+  const hasDetails = !!content?.blocks.some((b) => b.description || b.details?.length || b.media?.length);
 
   const source = useMemo(() => {
     if (!projectionId || cover.drawnW <= 0) return null;
@@ -46,12 +54,18 @@ export function FrameProjection({
   }, [projectionId, layout, toScreen, cover.drawnW, fromFloor]);
 
   useEffect(() => {
+    setActiveBlock(null);
+  }, [projectionId]);
+
+  useEffect(() => {
     if (!content) return;
     guardUntil.current = performance.now() + 450;
     track("gallery_item_opened", { id: content.id });
     closeRef.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key !== "Escape") return;
+      if (activeRef.current) setActiveBlock(null);
+      else onClose();
     };
     window.addEventListener("keydown", onKey);
     return () => {
@@ -286,12 +300,12 @@ export function FrameProjection({
         {narrowViewport ? (
           /* Phone: auto-playing showcase, one item at a time */
           <div className="relative mt-4 flex min-h-0 flex-1 flex-col">
-            <MobileShowcase blocks={content.blocks} gold={GOLD} />
+            <MobileShowcase blocks={content.blocks} gold={GOLD} onOpen={hasDetails ? setActiveBlock : undefined} openLabel={content.openLabel ?? "View"} />
           </div>
         ) : (
           <div className="relative mt-6 min-h-0 flex-1 overflow-y-auto overscroll-contain text-left" style={{ display: "grid", gap: blockGap, gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gridAutoRows: "max-content", alignContent: "start", alignItems: "start", paddingRight: 4, contain: "layout paint", willChange: "scroll-position", scrollbarWidth: "thin", scrollbarColor: "rgba(231,201,138,0.4) transparent" } as CSSProperties}>
             {content.blocks.map((b, i) => (
-              <GalleryCard key={b.title} block={b} index={i} gold={GOLD} titleSize={titleSize} bodySize={bodySize} pad={cardPad} />
+              <GalleryCard key={b.title} block={b} index={i} gold={GOLD} titleSize={titleSize} bodySize={bodySize} pad={cardPad} onOpen={hasDetails ? () => setActiveBlock(b) : undefined} openLabel={content.openLabel ?? "View"} />
             ))}
           </div>
         )}
@@ -307,14 +321,33 @@ export function FrameProjection({
           </button>
         </div>
       </div>
+      {activeBlock && (
+        <MediaDetail
+          eyebrow={activeBlock.kicker ?? `${content.eyebrow} · ${activeBlock.title}`}
+          title={activeBlock.title}
+          summary={activeBlock.description ?? activeBlock.body}
+          details={activeBlock.details}
+          links={activeBlock.links}
+          media={(activeBlock.media ?? []).map((m) => ({ type: m.type, src: m.src, caption: m.label }))}
+          cover={activeBlock.image}
+          portrait={narrowViewport}
+          closeLabel={content.closeLabel ?? "Close"}
+          onClose={() => setActiveBlock(null)}
+        />
+      )}
     </div>
   );
 }
 
-function GalleryCard({ block, index, gold, titleSize, bodySize, pad, phone = false }: { block: { index?: string; title: string; body: string; icon?: string; image?: string; imageAlt?: string; media?: { type: "image" | "video"; src: string; label?: string }[] }; index: number; gold: string; titleSize: number; bodySize: number; pad: number; phone?: boolean }) {
+function GalleryCard({ block, index, gold, titleSize, bodySize, pad, phone = false, onOpen, openLabel = "View" }: { block: ProjectionBlock; index: number; gold: string; titleSize: number; bodySize: number; pad: number; phone?: boolean; onOpen?: () => void; openLabel?: string }) {
   return (
     <div
-      className={`group relative flex flex-col overflow-hidden ${phone ? "shrink-0 snap-center justify-end" : ""}`}
+      className={`group relative flex flex-col overflow-hidden ${phone ? "shrink-0 snap-center justify-end" : ""} ${onOpen ? "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7c98a]" : ""}`}
+      role={onOpen ? "button" : undefined}
+      tabIndex={onOpen ? 0 : undefined}
+      aria-label={onOpen ? `${openLabel}: ${block.title}` : undefined}
+      onClick={onOpen}
+      onKeyDown={onOpen ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpen(); } } : undefined}
       style={{
         width: phone ? "min(80vw, 340px)" : undefined,
         minHeight: phone ? 300 : undefined,
@@ -351,6 +384,13 @@ function GalleryCard({ block, index, gold, titleSize, bodySize, pad, phone = fal
         <h3 className="relative text-white" style={{ marginTop: phone ? 18 : 14, fontSize: titleSize, lineHeight: 1.18, fontWeight: 600, letterSpacing: "-0.005em", paddingRight: 36 }}>{block.title}</h3>
         <span aria-hidden className="relative mt-3 block h-px w-8" style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }} />
         <p className="relative mt-3 text-white/78" style={{ fontSize: bodySize, lineHeight: 1.55 }}>{block.body}</p>
+        {onOpen && (
+          <span className="relative mt-4 inline-flex items-center gap-2 font-semibold uppercase" style={{ fontSize: 10.5, letterSpacing: "0.26em", color: gold }}>
+            {openLabel}
+            {block.media && block.media.length > 0 && <span className="rounded-sm px-1.5 py-0.5 text-white" style={{ fontSize: 9, letterSpacing: "0.12em", background: "rgba(37,99,235,0.7)" }}>{block.media.length} media</span>}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden className="transition group-hover:translate-x-1"><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </span>
+        )}
       </span>
     </div>
   );
