@@ -70,8 +70,11 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         <h2 ref={headRef} className="mb-4 font-medium leading-[1.08] text-white" style={{ fontSize: narrow ? "clamp(1.9rem, 8.5vw, 2.6rem)" : "clamp(1.75rem, 4.2vw, 3.4rem)" }}>
           {COPY.journey.headline}
         </h2>
-        <p ref={bodyRef} className="leading-relaxed text-white/80" style={{ fontSize: narrow ? 14 : 16, letterSpacing: "0.04em" }}>
+        <p ref={bodyRef} className="leading-relaxed text-white/80" style={{ fontSize: narrow ? 14 : 16 }}>
           {COPY.journey.body}
+          {COPY.journey.bodyLine2 && (
+            <span className="mt-2 block font-medium uppercase" style={{ fontSize: narrow ? 11 : 12, letterSpacing: "0.22em", color: "#e7c98a" }}>{COPY.journey.bodyLine2}</span>
+          )}
         </p>
         {/* Optional hand-written line (copy.journey.services); empty = not rendered */}
         {COPY.journey.services && <p
