@@ -4,13 +4,13 @@
     "backgroundMobile": "/data/levelup/aboutroommobile.png",
     "eyebrow": "About Level Up Com",
     "title": "Build · Innovate · Grow",
-    "intro": "Level Up Com is a digital marketing and communication agency. Branding, SEO, content creation, shooting, websites, campaigns and events: one team that takes your brand to the next level.",
+    "intro": "Level Up Com is a digital marketing and communication agency and creating AI models. Branding, SEO, content creation, shooting, websites, campaigns and events: one team that takes your brand to the next level.",
     "back": "Back to the hallway",
     "close": "Close"
   },
   "stats": [
     {
-      "value": "65+",
+      "value": "150 +",
       "label": "Projects delivered"
     },
     {
@@ -18,14 +18,14 @@
       "label": "Community"
     },
     {
-      "value": "11",
+      "value": "20",
       "label": "Sectors served"
     }
   ],
   "team": [
     {
       "id": "ceo",
-      "name": "Chacha",
+      "name": "Chedlia belhadj",
       "role": "CEO & Founder",
       "photo": "/data/levelup/team/ceo.jpg",
       "initials": "C",
@@ -43,7 +43,7 @@
       "role": "Directrice artistique",
       "photo": "/data/levelup/team/angela-mercato.jpg",
       "initials": "AM",
-      "bio": "Shapes the visual identity of every project: art direction, shootings, set design and content creation.",
+      "bio": "Executive Creative Director , Fashion Show Producer ,Stylist.",
       "links": [
         {
           "label": "Instagram",
