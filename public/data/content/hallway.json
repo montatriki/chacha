@@ -725,11 +725,11 @@
           "title": "Industry",
           "body": "Groupe Soquibat",
           "icon": "factory",
-          "image": "/data/clients/soquibat-logo.png",
+          "image": "/data/clients/soquibat-card.jpg",
           "media": [
             {
               "type": "image",
-              "src": "/data/clients/soquibat-logo.png",
+              "src": "/data/clients/soquibat-card.jpg",
               "label": "Groupe Soquibat"
             }
           ],
