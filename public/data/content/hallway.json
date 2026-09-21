@@ -874,24 +874,29 @@
           "title": "Haute couture",
           "body": "Faouizia Frad",
           "icon": "couture",
-          "image": "/data/clients/couture-green-shoot.jpg",
+          "image": "/data/clients/faouizia-frad-1.jpg",
           "media": [
             {
               "type": "image",
-              "src": "/data/clients/couture-green-shoot.jpg",
-              "label": "Haute couture shooting"
+              "src": "/data/clients/faouizia-frad-1.jpg",
+              "label": "Faouizia Frad · haute couture shooting"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/faouizia-frad-2.jpg",
+              "label": "Faouizia Frad · haute couture shooting"
             }
           ],
           "kicker": "Haute couture · Faouizia Frad",
-          "description": "Editorial shooting for the couture designer Faouizia Frad.",
+          "description": "Editorial shooting and campaign for the couture designer Faouizia Frad (July 2025).",
           "details": [
-            "Studio shooting with painted backdrop",
-            "Campaign visuals and stories"
+            "Editorial photo shooting, July 2025",
+            "Campaign visuals and stories for the collection"
           ],
           "links": [
             {
-              "label": "Posts on Instagram",
-              "url": "https://www.instagram.com/levelup.conseil/"
+              "label": "Post on Instagram",
+              "url": "https://www.instagram.com/p/DLpysYBNV6N/"
             }
           ]
         },
