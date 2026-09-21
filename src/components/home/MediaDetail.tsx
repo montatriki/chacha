@@ -4,7 +4,7 @@ import { SITE } from "@/config/site";
 
 const GOLD = "#e7c98a";
 
-export interface DetailMedia { type: "image" | "video"; src: string; caption?: string }
+export interface DetailMedia { type: "image" | "video"; src: string; caption?: string; poster?: string }
 export interface DetailLink { label: string; url: string }
 
 /**
@@ -73,7 +73,7 @@ export function MediaDetail({
         <div className={`relative ${portrait ? "w-full" : "h-full"} flex items-center justify-center overflow-hidden`} style={{ flex: portrait ? "0 0 52%" : "0 0 58%", background: "#05091a" }}>
           {item && !failed[item.src] ? (
             item.type === "video" ? (
-              <video key={item.src} src={item.src} className="h-full w-full object-contain" controls autoPlay muted playsInline preload="metadata" onError={() => setFailed((f) => ({ ...f, [item.src]: true }))} />
+              <video key={item.src} src={item.src} poster={item.poster} className="h-full w-full object-contain" controls autoPlay muted playsInline preload="metadata" onError={() => setFailed((f) => ({ ...f, [item.src]: true }))} />
             ) : (
               <img key={item.src} src={item.src} alt={item.caption ?? title} className="h-full w-full object-contain" onError={() => setFailed((f) => ({ ...f, [item.src]: true }))} style={{ animation: "eventsRoomIn 0.5s ease-out both" }} />
             )

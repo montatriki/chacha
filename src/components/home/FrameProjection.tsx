@@ -328,7 +328,7 @@ export function FrameProjection({
           summary={activeBlock.description ?? activeBlock.body}
           details={activeBlock.details}
           links={activeBlock.links}
-          media={(activeBlock.media ?? []).map((m) => ({ type: m.type, src: m.src, caption: m.label }))}
+          media={(activeBlock.media ?? []).map((m) => ({ type: m.type, src: m.src, caption: m.label, poster: m.poster }))}
           cover={activeBlock.image}
           portrait={narrowViewport}
           closeLabel={content.closeLabel ?? "Close"}

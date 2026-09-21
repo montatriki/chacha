@@ -391,7 +391,8 @@
             {
               "type": "video",
               "src": "/data/levelup/k.mp4",
-              "label": "K Reine"
+              "label": "K Reine",
+              "poster": "/data/posters/k.jpg"
             }
           ],
           "kicker": "Cosmetics · Happyness by Djoya · K Reine",
@@ -463,7 +464,8 @@
             {
               "type": "video",
               "src": "/data/levelup/pantheon.mp4",
-              "label": "The Panthéon"
+              "label": "The Panthéon",
+              "poster": "/data/posters/pantheon.jpg"
             }
           ],
           "kicker": "Real estate · The Panthéon",
@@ -494,17 +496,20 @@
             {
               "type": "video",
               "src": "/data/levelup/tsf.mp4",
-              "label": "TFS"
+              "label": "TFS",
+              "poster": "/data/posters/tsf.jpg"
             },
             {
               "type": "video",
               "src": "/data/levelup/padel.mp4",
-              "label": "Padel Connexion"
+              "label": "Padel Connexion",
+              "poster": "/data/posters/padel.jpg"
             },
             {
               "type": "video",
               "src": "/data/levelup/skypadel.mp4",
-              "label": "SKY Padel"
+              "label": "SKY Padel",
+              "poster": "/data/posters/skypadel.jpg"
             }
           ],
           "kicker": "Sport · TSF · Gym Boxe · Padel Connexion · Sunset Pilates · Sky Padel",
@@ -556,7 +561,8 @@
             {
               "type": "video",
               "src": "/data/clients/holistix-loop.mp4",
-              "label": "Holistix"
+              "label": "Holistix",
+              "poster": "/data/posters/holistix-loop.jpg"
             }
           ],
           "kicker": "Food supplements · Holistix · Holigums",
@@ -586,7 +592,8 @@
             {
               "type": "video",
               "src": "/data/events/riviera-dolce.mp4",
-              "label": "Riviera · La Dolce Riviera"
+              "label": "Riviera · La Dolce Riviera",
+              "poster": "/data/posters/riviera-dolce.jpg"
             }
           ],
           "kicker": "Ready-to-wear · Riviera · 5Progress",
@@ -655,7 +662,8 @@
             {
               "type": "video",
               "src": "/data/levelup/Secrito.mp4",
-              "label": "Secrito salon de thé"
+              "label": "Secrito salon de thé",
+              "poster": "/data/posters/secrito.jpg"
             }
           ],
           "kicker": "Restaurants & coffee · Secrito salon de thé",

@@ -1,7 +1,7 @@
 import events from "@data/content/events.json";
 
 export interface EventLink { label: string; url: string }
-export interface EventMedia { type: "image" | "video"; src: string; caption?: string }
+export interface EventMedia { type: "image" | "video"; src: string; caption?: string; poster?: string }
 export interface EventItem {
   id: string;
   title: string;

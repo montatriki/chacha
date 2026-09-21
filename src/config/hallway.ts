@@ -138,6 +138,8 @@ export interface CardMedia {
   type: "image" | "video";
   src: string;
   label?: string;
+  /** Still frame shown before the video plays (and instead of it when autoplay is blocked, e.g. iOS Low Power Mode). */
+  poster?: string;
 }
 
 export interface ProjectionBlock {

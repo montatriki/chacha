@@ -47,7 +47,8 @@
         {
           "type": "video",
           "src": "/data/levelup/tsf.mp4",
-          "caption": "Tunisia Sports Festival · story"
+          "caption": "Tunisia Sports Festival · story",
+          "poster": "/data/posters/tsf.jpg"
         }
       ]
     },
@@ -78,7 +79,8 @@
         {
           "type": "video",
           "src": "/data/levelup/skypadel.mp4",
-          "caption": "Sky Padel · teaser"
+          "caption": "Sky Padel · teaser",
+          "poster": "/data/posters/skypadel.jpg"
         }
       ]
     },
@@ -134,7 +136,8 @@
         {
           "type": "video",
           "src": "/data/events/riviera-dolce.mp4",
-          "caption": "La Dolce Riviera · teaser (reel with Hend Makni, 7 July 2026)"
+          "caption": "La Dolce Riviera · teaser (reel with Hend Makni, 7 July 2026)",
+          "poster": "/data/posters/riviera-dolce.jpg"
         },
         {
           "type": "image",
