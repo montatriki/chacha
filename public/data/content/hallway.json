@@ -474,8 +474,8 @@
           "media": [
             {
               "type": "image",
-              "src": "/data/clients/couture-green-shoot.jpg",
-              "label": "Editorial shooting · haute couture"
+              "src": "/data/clients/color-me.jpg",
+              "label": "Color Me · fragrance campaign shooting"
             },
             {
               "type": "image",
@@ -569,7 +569,7 @@
       "blocks": [
         {
           "title": "Cosmetics",
-          "body": "Happyness by Djoya · K Reine",
+          "body": "Happyness by Djoya · K Reine · Color Me",
           "icon": "cosmetics",
           "image": "/data/clients/happyness-by-djoya-card.jpg",
           "imageAlt": "Happyness by Djoya sun care campaign",
@@ -584,14 +584,20 @@
               "src": "/data/levelup/k.mp4",
               "label": "K Reine",
               "poster": "/data/posters/k.jpg"
+            },
+            {
+              "type": "image",
+              "src": "/data/clients/color-me.jpg",
+              "label": "Color Me · fragrance campaign"
             }
           ],
-          "kicker": "Cosmetics · Happyness by Djoya · K Reine",
-          "description": "Beauty and cosmetics brands: launch events, campaigns and content for K Reine and Happyness by Djoya.",
+          "kicker": "Cosmetics · Happyness by Djoya · K Reine · Color Me",
+          "description": "Beauty and cosmetics brands: launch events, campaigns and content for K Reine, Happyness by Djoya and Color Me.",
           "details": [
             "K Reine · Glow Kiss launch event with a lips-themed photo wall",
             "K Reine · Summer event and sun care campaign (July 2026)",
-            "Happyness by Djoya · product visuals and social content"
+            "Happyness by Djoya · product visuals and social content",
+            "Color Me · fragrance campaign shooting (July 2025)"
           ],
           "links": [
             {
@@ -601,6 +607,10 @@
             {
               "label": "Reel: Summer K Reine event",
               "url": "https://www.instagram.com/levelup.conseil/reel/DabDCTEOnmQ/"
+            },
+            {
+              "label": "Post: Color Me campaign",
+              "url": "https://www.instagram.com/p/DLpwQE6tJXd/"
             }
           ]
         },
