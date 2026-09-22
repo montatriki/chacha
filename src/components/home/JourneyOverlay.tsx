@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { Fragment, useEffect, useRef, useState, type RefObject } from "react";
 import { gsap } from "gsap";
 import { COPY } from "@/config/site";
 
@@ -10,7 +10,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
   const eyebrowRef = useRef<HTMLParagraphElement | null>(null);
   const headRef = useRef<HTMLHeadingElement | null>(null);
   const bodyRef = useRef<HTMLParagraphElement | null>(null);
-  const servicesRef = useRef<HTMLParagraphElement | null>(null);
+  const servicesRef = useRef<HTMLSpanElement | null>(null);
   // Phones: the copy column takes most of the width instead of the desktop's 42vw strip.
   const [narrow, setNarrow] = useState(false);
   useEffect(() => {
@@ -27,17 +27,17 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     const eyebrow = eyebrowRef.current;
     const head = headRef.current;
     const body = bodyRef.current;
-    const services = servicesRef.current;
     if (!root || !eyebrow || !head || !body) return;
+    void servicesRef.current;
     gsap.set(root, { opacity: 1 });
-    gsap.set([eyebrow, head, body], { opacity: 0, x: -28, y: 0 });
-    // the handwritten line is "signed" in: fades up while its letters slide from the left
-    if (services) gsap.set(services, { opacity: 0, x: -28, y: 0 });
+    gsap.set([eyebrow, head], { opacity: 0, x: -28, y: 0 });
+    // The tagline settles in from slightly below, out of focus, and a light sweeps across it
+    // once it lands; the service words then light up one by one (CSS, see .journey-service-word).
+    gsap.set(body, { opacity: 0, y: 14, filter: "blur(6px)" });
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
     tl.to(eyebrow, { opacity: 1, x: 0, duration: 0.7 }, 0)
       .to(head, { opacity: 1, x: 0, duration: 0.85 }, 0.12)
-      .to(body, { opacity: 1, x: 0, duration: 0.8 }, 0.28);
-    if (services) tl.to(services, { opacity: 1, x: 0, duration: 0.85 }, 0.42);
+      .to(body, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, ease: "power3.out" }, 0.34);
     tl.to(root, { opacity: 0, y: -12, duration: 0.7, ease: "power2.in" }, HOLD_MS / 1000);
     const start = performance.now();
     let raf = 0;
@@ -48,7 +48,6 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         gsap.set(eyebrow, { y: d * 0.25 });
         gsap.set(head, { y: d * 0.55, x: d * -0.08 });
         gsap.set(body, { y: d * 0.85 });
-        if (services) gsap.set(services, { y: d * 1.05 });
       }
       void videoRef.current;
       raf = requestAnimationFrame(drift);
@@ -73,28 +72,16 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         <p ref={bodyRef} className="leading-relaxed text-white/80" style={{ fontSize: narrow ? 14 : 16 }}>
           {COPY.journey.body}
           {COPY.journey.bodyLine2 && (
-            <span className="mt-2 block font-medium uppercase" style={{ fontSize: narrow ? 11 : 12, letterSpacing: "0.22em", color: "#e7c98a" }}>{COPY.journey.bodyLine2}</span>
+            <span ref={servicesRef} className="journey-services mt-3 block font-medium uppercase" style={{ fontSize: narrow ? 11 : 12, letterSpacing: "0.22em" }}>
+              {COPY.journey.bodyLine2.split(" · ").map((part, i, all) => (
+                <Fragment key={part}>
+                  <span className="journey-service-word" style={{ animationDelay: `${1.05 + i * 0.28}s` }}>{part}</span>
+                  {i < all.length - 1 && <span className="journey-service-dot" aria-hidden style={{ animationDelay: `${1.19 + i * 0.28}s` }}>·</span>}
+                </Fragment>
+              ))}
+            </span>
           )}
         </p>
-        {/* Second headline in the same style as the first (copy.journey.headline2) */}
-        {COPY.journey.headline2 && (
-          <h2 ref={servicesRef} className="mt-5 font-medium leading-[1.08] text-white" style={{ fontSize: narrow ? "clamp(1.9rem, 8.5vw, 2.6rem)" : "clamp(1.75rem, 4.2vw, 3.4rem)" }}>
-            {COPY.journey.headline2}
-          </h2>
-        )}
-        {/* Optional hand-written line (copy.journey.services); empty = not rendered */}
-        {COPY.journey.services && <p
-          ref={servicesRef}
-          className="journey-script mt-4"
-          style={{
-            fontSize: narrow ? "clamp(2.6rem, 12vw, 3.6rem)" : "clamp(2.8rem, 5vw, 4.4rem)",
-            lineHeight: 1.08,
-            letterSpacing: "0.01em",
-            paddingRight: "0.3em", // room for the trailing flourish of the script
-          }}
-        >
-          {COPY.journey.services}
-        </p>}
       </div>
     </div>
   );
