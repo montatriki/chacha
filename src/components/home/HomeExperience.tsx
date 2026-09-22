@@ -52,7 +52,8 @@ export function HomeExperience() {
   const toDoorRef = useRef<HTMLVideoElement | null>(null);
   const portalRef = useRef<HTMLVideoElement | null>(null);
 
-  const [phase, setPhase] = useState<Phase>("preloader");
+  // The particle preloader is skipped: visitors land straight on the ready gate.
+  const [phase, setPhase] = useState<Phase>("ready");
   const [loadProgress, setLoadProgress] = useState(0);
   const [activeScene, setActiveScene] = useState<SceneId>("journey");
   const [projection, setProjection] = useState<ProjectionId | null>(null);
@@ -311,7 +312,7 @@ export function HomeExperience() {
     const url = new URL(window.location.href);
     url.searchParams.delete("mobileFloorAlign");
     window.history.replaceState({}, "", url.toString());
-    setPhase("preloader");
+    setPhase("ready");
     setLoadProgress(0);
     setActiveScene("journey");
     setHallwayEnded(false);
