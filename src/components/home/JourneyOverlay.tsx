@@ -90,7 +90,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
   if (!visible) return null;
   return (
     <div ref={rootRef} className="pointer-events-none absolute inset-0 z-10">
-      <div className="absolute top-1/2 -translate-y-1/2" style={{ left: narrow ? "6%" : "7%", width: narrow ? "min(88vw, 480px)" : "min(52vw, 720px)" }}>
+      <div className="absolute top-1/2 -translate-y-1/2" style={{ left: narrow ? "6%" : "7%", width: narrow ? "min(88vw, 480px)" : "min(60vw, 860px)" }}>
         <p ref={eyebrowRef} className="mb-3 tracking-[0.4em] text-[#2563eb] uppercase" style={{ fontSize: narrow ? 10 : 11 }}>
           {COPY.journey.eyebrow}
         </p>
@@ -101,7 +101,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
             sentence. The service list below builds as glowing gold chips that keep breathing. */}
         {/* The tagline is presented as chips, exactly like the service line below it: the sentence
             is split into phrases on its commas, each becoming its own gold chip. */}
-        <span ref={bodyRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 16 : 20, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
+        <span ref={bodyRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 16 : 20, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 8px" : "12px 10px" }}>
           {COPY.journey.body
             .replace(/\.$/, "")
             .split(/\s*[,:]\s*/)
@@ -116,7 +116,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
             ))}
         </span>
         {COPY.journey.bodyLine2 && (
-          <span ref={servicesRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 14 : 18, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
+          <span ref={servicesRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 14 : 18, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 8px" : "12px 10px" }}>
             {COPY.journey.bodyLine2.split(" · ").map((part, i, all) => (
               <Fragment key={part}>
                 <span className="journey-chip" style={{ animationDelay: `${1.25 + i * 0.3}s`, ["--chip-i" as string]: i }}>
