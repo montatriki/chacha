@@ -9,7 +9,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
   const rootRef = useRef<HTMLDivElement | null>(null);
   const eyebrowRef = useRef<HTMLParagraphElement | null>(null);
   const headRef = useRef<HTMLHeadingElement | null>(null);
-  const bodyRef = useRef<HTMLParagraphElement | null>(null);
+  const bodyRef = useRef<HTMLSpanElement | null>(null);
   const servicesRef = useRef<HTMLSpanElement | null>(null);
   // Phones: the copy column takes most of the width instead of the desktop's 42vw strip.
   const [narrow, setNarrow] = useState(false);
@@ -28,7 +28,6 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     const head = headRef.current;
     const body = bodyRef.current;
     if (!root || !eyebrow || !head || !body) return;
-    void servicesRef.current;
     gsap.set(root, { opacity: 1 });
     gsap.set([eyebrow, head], { opacity: 0, x: -28, y: 0 });
     // The tagline settles in from slightly below, out of focus, and a light sweeps across it
@@ -39,7 +38,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
       .to(head, { opacity: 1, x: 0, duration: 0.85 }, 0.12);
     // Once the words have landed, a wave of light keeps travelling along the sentence: each word
     // brightens and lifts a little as the wave passes, then settles. It repeats for the whole scene.
-    const words = body.querySelectorAll<HTMLElement>(".journey-word");
+    const words = body.querySelectorAll<HTMLElement>(".journey-chip-label");
     let wave: gsap.core.Timeline | null = null;
     if (words.length) {
       wave = gsap.timeline({ repeat: -1, repeatDelay: 0.9, delay: 1.2 });
@@ -75,6 +74,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         gsap.set(eyebrow, { y: d * 0.25 });
         gsap.set(head, { y: d * 0.55, x: d * -0.08 });
         gsap.set(body, { y: d * 0.85 });
+        if (servicesRef.current) gsap.set(servicesRef.current, { y: d * 0.85 });
       }
       void videoRef.current;
       raf = requestAnimationFrame(drift);
@@ -90,28 +90,33 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
   if (!visible) return null;
   return (
     <div ref={rootRef} className="pointer-events-none absolute inset-0 z-10">
-      <div className="absolute top-1/2 -translate-y-1/2" style={{ left: narrow ? "6%" : "7%", width: narrow ? "min(88vw, 480px)" : "min(40vw, 500px)" }}>
+      <div className="absolute top-1/2 -translate-y-1/2" style={{ left: narrow ? "6%" : "7%", width: narrow ? "min(88vw, 480px)" : "min(52vw, 720px)" }}>
         <p ref={eyebrowRef} className="mb-3 tracking-[0.4em] text-[#2563eb] uppercase" style={{ fontSize: narrow ? 10 : 11 }}>
           {COPY.journey.eyebrow}
         </p>
-        <h2 ref={headRef} className="mb-4 font-medium leading-[1.08] text-white" style={{ fontSize: narrow ? "clamp(1.9rem, 8.5vw, 2.6rem)" : "clamp(1.75rem, 4.2vw, 3.4rem)" }}>
+        <h2 ref={headRef} className="mb-4 font-medium leading-[1.08] text-white" style={{ fontSize: narrow ? "clamp(1.9rem, 8.5vw, 2.6rem)" : "clamp(1.75rem, 4.2vw, 3.4rem)", maxWidth: narrow ? undefined : "13ch" }}>
           {COPY.journey.headline}
         </h2>
         {/* Tagline: each word rises and un-blurs on its own beat, then a light sweeps the finished
             sentence. The service list below builds as glowing gold chips that keep breathing. */}
-        <p ref={bodyRef} className="journey-tagline text-white/90" style={{ fontSize: narrow ? 15 : 17, lineHeight: 1.75, marginTop: narrow ? 14 : 18 }}>
-          <span className="journey-tagline-inner">
-            {COPY.journey.body.split(" ").map((word, i) => (
-              <span key={`${word}-${i}`} className="journey-word" style={{ animationDelay: `${0.35 + i * 0.055}s` }}>
-                {word}
-                <span className="journey-word-gap">&nbsp;</span>
-              </span>
+        {/* The tagline is presented as chips, exactly like the service line below it: the sentence
+            is split into phrases on its commas, each becoming its own gold chip. */}
+        <span ref={bodyRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 16 : 20, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
+          {COPY.journey.body
+            .replace(/\.$/, "")
+            .split(/\s*[,:]\s*/)
+            .filter(Boolean)
+            .map((part, i, all) => (
+              <Fragment key={part}>
+                <span className="journey-chip" style={{ animationDelay: `${0.4 + i * 0.3}s`, ["--chip-i" as string]: i }}>
+                  <span className="journey-chip-label">{part}</span>
+                </span>
+                {i < all.length - 1 && <span className="journey-chip-dot" aria-hidden style={{ animationDelay: `${0.55 + i * 0.3}s` }} />}
+              </Fragment>
             ))}
-          </span>
-          <span className="journey-underline" aria-hidden />
-        </p>
+        </span>
         {COPY.journey.bodyLine2 && (
-          <span ref={servicesRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 20 : 26, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
+          <span ref={servicesRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 14 : 18, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
             {COPY.journey.bodyLine2.split(" · ").map((part, i, all) => (
               <Fragment key={part}>
                 <span className="journey-chip" style={{ animationDelay: `${1.25 + i * 0.3}s`, ["--chip-i" as string]: i }}>
