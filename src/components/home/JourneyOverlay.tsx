@@ -38,8 +38,12 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     tl.to(eyebrow, { opacity: 1, x: 0, duration: 0.7 }, 0)
       .to(head, { opacity: 1, x: 0, duration: 0.85 }, 0.12);
     // a light sweeps across the sentence once every word has landed
-    const sweep = body.querySelector<HTMLElement>(".journey-tagline-inner");
-    if (sweep) tl.fromTo(sweep, { backgroundPosition: "-140% 0" }, { backgroundPosition: "240% 0", duration: 1.6, ease: "power1.inOut" }, 1.15);
+    const words = body.querySelectorAll<HTMLElement>(".journey-word");
+    if (words.length) {
+      // a wave of brightness travels along the sentence, one word after the next
+      tl.to(words, { color: "#ffffff", textShadow: "0 0 18px rgba(255,255,255,0.75)", duration: 0.28, stagger: { each: 0.045 }, ease: "power2.out" }, 1.15)
+        .to(words, { color: "rgba(255,255,255,0.9)", textShadow: "0 0 0 rgba(255,255,255,0)", duration: 0.5, stagger: { each: 0.045 }, ease: "power2.inOut" }, 1.34);
+    }
     tl.to(root, { opacity: 0, y: -12, duration: 0.7, ease: "power2.in" }, HOLD_MS / 1000);
     const start = performance.now();
     let raf = 0;
@@ -73,7 +77,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
         </h2>
         {/* Tagline: each word rises and un-blurs on its own beat, then a light sweeps the finished
             sentence. The service list below builds as glowing gold chips that keep breathing. */}
-        <p ref={bodyRef} className="journey-tagline leading-relaxed text-white/85" style={{ fontSize: narrow ? 14 : 16 }}>
+        <p ref={bodyRef} className="journey-tagline text-white/90" style={{ fontSize: narrow ? 15 : 17, lineHeight: 1.75, marginTop: narrow ? 14 : 18 }}>
           <span className="journey-tagline-inner">
             {COPY.journey.body.split(" ").map((word, i) => (
               <span key={`${word}-${i}`} className="journey-word" style={{ animationDelay: `${0.35 + i * 0.055}s` }}>
@@ -82,9 +86,10 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
               </span>
             ))}
           </span>
+          <span className="journey-underline" aria-hidden />
         </p>
         {COPY.journey.bodyLine2 && (
-          <span ref={servicesRef} className="journey-services mt-4 flex flex-wrap items-center font-medium uppercase" style={{ fontSize: narrow ? 10.5 : 12, letterSpacing: "0.22em", gap: narrow ? "8px 10px" : "10px 14px" }}>
+          <span ref={servicesRef} className="journey-services flex flex-wrap items-center font-semibold uppercase" style={{ marginTop: narrow ? 20 : 26, fontSize: narrow ? 10.5 : 11.5, letterSpacing: "0.26em", gap: narrow ? "10px 10px" : "12px 14px" }}>
             {COPY.journey.bodyLine2.split(" · ").map((part, i, all) => (
               <Fragment key={part}>
                 <span className="journey-chip" style={{ animationDelay: `${1.25 + i * 0.3}s`, ["--chip-i" as string]: i }}>

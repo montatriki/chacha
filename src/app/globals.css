@@ -563,7 +563,7 @@
 .px-1{padding-left:.25rem;padding-right:.25rem}
 
 /* Gold variant of the silver lining rim, for the hallway's brass/marble palette */
-.aradi-gold-lining{position:relative;isolation:isolate;border:1px solid rgba(231,201,138,.55);animation:silverLiningPulse 2.8s ease-in-out infinite}
+.aradi-gold-lining{position:relative;isolation:isolate;border:1px solid rgba(231,201,138,.7);animation:silverLiningPulse 2.8s ease-in-out infinite}
 .aradi-gold-lining:before{content:"";position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;z-index:-1;border-radius:inherit;padding:1px;background:linear-gradient(110deg,#8a6d3b,#e7c98a,#fff3d6 36%,#c9a961,#f1dcae,#8a6d3b,#e7c98a);background-size:220% 100%;animation:silverSheen 3.2s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .w-\[150px\]{width:150px}.top-8{top:2rem}
 
@@ -792,15 +792,20 @@
    The sentence builds word by word (each rises, un-blurs and brightens), a light then sweeps
    across it, and the service list assembles as gold chips that keep a slow glow afterwards.
    Everything is opacity/transform/filter on small elements, so it stays cheap to paint. */
-.journey-tagline{position:relative}
-.journey-tagline-inner{position:relative;display:inline;background-image:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.85) 50%,transparent 60%);background-size:280% 100%;background-position:-140% 0;-webkit-background-clip:text;background-clip:text}
+.journey-tagline{position:relative;display:flow-root;text-wrap:pretty;padding-bottom:2px}
+/* a gold hairline draws itself under the sentence once the words have landed */
+.journey-underline{display:block;height:1px;width:0;margin-top:14px;max-width:min(100%,420px);background:linear-gradient(90deg,rgba(231,201,138,.9),rgba(231,201,138,.15) 70%,transparent);animation:journeyRule 1.1s cubic-bezier(.16,1,.3,1) 1.05s both}
+@keyframes journeyRule{0%{width:0;opacity:0}30%{opacity:1}to{width:100%;opacity:1}}
+/* The sweep rides on the text itself. background-clip:text needs a transparent fill to show,
+   so the words carry the gradient and their own colour comes from the paragraph underneath. */
+.journey-tagline-inner{position:relative;display:inline}
 .journey-word-gap{display:inline-block;width:.28em}
-.journey-word{display:inline-block;opacity:0;transform:translateY(16px) scale(.96);filter:blur(8px);animation:journeyWordRise .85s cubic-bezier(.16,1,.3,1) both;will-change:transform,opacity,filter}
+.journey-word{position:relative;display:inline-block;opacity:0;transform:translateY(16px) scale(.96);filter:blur(8px);animation:journeyWordRise .85s cubic-bezier(.16,1,.3,1) both;will-change:transform,opacity,filter}
 @keyframes journeyWordRise{0%{opacity:0;transform:translateY(16px) scale(.96);filter:blur(8px)}60%{opacity:1;filter:blur(0)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
 
 /* the gold service chips */
 .journey-services{color:#e7c98a}
-.journey-chip{position:relative;display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;opacity:0;transform:translateY(14px) scale(.9);border:1px solid rgba(231,201,138,.55);background:linear-gradient(160deg,rgba(231,201,138,.16),rgba(10,15,31,.55));box-shadow:0 6px 20px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.12);animation:journeyChipIn .9s cubic-bezier(.16,1,.3,1) both,journeyChipGlow 3.6s ease-in-out infinite;animation-delay:inherit,calc(1.6s + var(--chip-i,0) * .3s);will-change:transform,opacity}
+.journey-chip{position:relative;display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;opacity:0;transform:translateY(14px) scale(.9);border:1px solid rgba(231,201,138,.7);background:linear-gradient(160deg,rgba(231,201,138,.2),rgba(10,15,31,.72));backdrop-filter:blur(2px);box-shadow:0 6px 20px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.12);animation:journeyChipIn .9s cubic-bezier(.16,1,.3,1) both,journeyChipGlow 3.6s ease-in-out infinite;animation-delay:inherit,calc(1.6s + var(--chip-i,0) * .3s);will-change:transform,opacity}
 .journey-chip-label{position:relative;z-index:1;white-space:nowrap}
 /* a highlight that slides across each chip as it lands */
 .journey-chip::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);background-size:250% 100%;background-position:-120% 0;animation:journeyChipSheen 1.5s ease-out both;animation-delay:inherit;pointer-events:none}
@@ -810,4 +815,4 @@
 /* the small diamond between chips */
 .journey-chip-dot{display:inline-block;width:5px;height:5px;opacity:0;background:#e7c98a;transform:rotate(45deg) scale(.4);animation:journeyDotPop .6s cubic-bezier(.16,1,.3,1) both;box-shadow:0 0 10px rgba(231,201,138,.7)}
 @keyframes journeyDotPop{0%{opacity:0;transform:rotate(0deg) scale(.4)}to{opacity:.9;transform:rotate(45deg) scale(1)}}
-@media (prefers-reduced-motion:reduce){.journey-word,.journey-chip,.journey-chip-dot,.journey-chip::after{animation:none;opacity:1;transform:none;filter:none}}
+@media (prefers-reduced-motion:reduce){.journey-underline{width:100%}.journey-word,.journey-chip,.journey-chip-dot,.journey-chip::after{animation:none;opacity:1;transform:none;filter:none}}
