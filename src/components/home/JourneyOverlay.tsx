@@ -37,12 +37,33 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
     tl.to(eyebrow, { opacity: 1, x: 0, duration: 0.7 }, 0)
       .to(head, { opacity: 1, x: 0, duration: 0.85 }, 0.12);
-    // a light sweeps across the sentence once every word has landed
+    // Once the words have landed, a wave of light keeps travelling along the sentence: each word
+    // brightens and lifts a little as the wave passes, then settles. It repeats for the whole scene.
     const words = body.querySelectorAll<HTMLElement>(".journey-word");
+    let wave: gsap.core.Timeline | null = null;
     if (words.length) {
-      // a wave of brightness travels along the sentence, one word after the next
-      tl.to(words, { color: "#ffffff", textShadow: "0 0 18px rgba(255,255,255,0.75)", duration: 0.28, stagger: { each: 0.045 }, ease: "power2.out" }, 1.15)
-        .to(words, { color: "rgba(255,255,255,0.9)", textShadow: "0 0 0 rgba(255,255,255,0)", duration: 0.5, stagger: { each: 0.045 }, ease: "power2.inOut" }, 1.34);
+      wave = gsap.timeline({ repeat: -1, repeatDelay: 0.9, delay: 1.2 });
+      wave
+        .to(words, {
+          color: "#ffffff",
+          textShadow: "0 0 20px rgba(255,255,255,0.9)",
+          y: -4,
+          duration: 0.34,
+          ease: "power2.out",
+          stagger: { each: 0.055 },
+        })
+        .to(
+          words,
+          {
+            color: "rgba(255,255,255,0.88)",
+            textShadow: "0 0 0 rgba(255,255,255,0)",
+            y: 0,
+            duration: 0.62,
+            ease: "power2.inOut",
+            stagger: { each: 0.055 },
+          },
+          0.2,
+        );
     }
     tl.to(root, { opacity: 0, y: -12, duration: 0.7, ease: "power2.in" }, HOLD_MS / 1000);
     const start = performance.now();
@@ -62,6 +83,7 @@ export function JourneyOverlay({ videoRef, visible }: { videoRef: RefObject<HTML
     return () => {
       cancelAnimationFrame(raf);
       tl.kill();
+      wave?.kill();
     };
   }, [visible, videoRef]);
 
