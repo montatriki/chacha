@@ -70,8 +70,13 @@ function sampleWordPoints(lines: { text: string; font: string }[], count: number
 
   // Same footprint rule as the original (icon box = min(w,h) * 0.42), but the word is
   // wide, so fit its width into the screen while keeping its aspect ratio.
-  const boxH = Math.min(w, h) * 0.42;
-  const scale = Math.min(boxH / H, (w * 0.82) / W);
+  // A single short line can fill more of the screen than a stacked block, and phones have far
+  // less width to spare, so the word is allowed to run wider there.
+  const singleLine = measured.length === 1;
+  const narrow = w < 640;
+  const boxH = Math.min(w, h) * (singleLine ? 0.5 : 0.42);
+  const widthFrac = narrow ? (singleLine ? 0.88 : 0.82) : 0.82;
+  const scale = Math.min(boxH / H, (w * widthFrac) / W);
   const drawW = W * scale;
   const drawH = H * scale;
   const ox = w / 2 - drawW / 2;
