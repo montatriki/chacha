@@ -3,12 +3,13 @@
     "backgroundDesktop": "/data/levelup/eventroomdesktop.png",
     "backgroundMobile": "/data/levelup/eventroommobile.png",
     "eyebrow": "Events",
-    "title": "Events & activations",
+    "title": "Campaigns & Events",
     "intro": "Sport festivals, club launches, brand activations and shootings produced by Level Up Com.",
     "instagram": "https://www.instagram.com/levelup.conseil/",
     "back": "Return",
     "openLabel": "View event",
-    "close": "Close"
+    "close": "Close",
+    "tagline": "Elevate your brand. Amplify your impact."
   },
   "events": [
     {

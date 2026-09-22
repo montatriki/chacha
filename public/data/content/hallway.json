@@ -569,7 +569,7 @@
       "blocks": [
         {
           "title": "Cosmetics",
-          "body": "Happyness by Djoya · K Reine · Color Me",
+          "body": "Happyness by Djoya · Color Me · K Reine ",
           "icon": "cosmetics",
           "image": "/data/clients/happyness-by-djoya-card.jpg",
           "imageAlt": "Happyness by Djoya sun care campaign",
@@ -580,15 +580,15 @@
               "label": "Happyness by Djoya"
             },
             {
+              "type": "image",
+              "src": "/data/clients/color-me.jpg",
+              "label": "Color Me · fragrance campaign"
+            },
+            {
               "type": "video",
               "src": "/data/levelup/k.mp4",
               "label": "K Reine",
               "poster": "/data/posters/k.jpg"
-            },
-            {
-              "type": "image",
-              "src": "/data/clients/color-me.jpg",
-              "label": "Color Me · fragrance campaign"
             }
           ],
           "kicker": "Cosmetics · Happyness by Djoya · K Reine · Color Me",
@@ -758,12 +758,6 @@
               "type": "image",
               "src": "/data/clients/holigums-kids.jpg",
               "label": "Holigums · Multivitamins for kids"
-            },
-            {
-              "type": "video",
-              "src": "/data/clients/holistix-loop.mp4",
-              "label": "Holistix",
-              "poster": "/data/posters/holistix-loop.jpg"
             }
           ],
           "kicker": "Dietary supplement  · Holistix · Holigums",
@@ -793,8 +787,20 @@
             {
               "type": "video",
               "src": "/data/events/riviera-dolce.mp4",
-              "label": "Riviera · La Dolce Riviera",
-              "poster": "/data/posters/riviera-dolce.jpg"
+              "poster": "/data/posters/riviera-dolce.jpg",
+              "label": "Riviera · La Dolce Riviera"
+            },
+            {
+              "type": "video",
+              "src": "/data/clients/riviera-breeza.mp4",
+              "poster": "/data/posters/riviera-breeza.jpg",
+              "label": "Riviera · Set Breeza"
+            },
+            {
+              "type": "video",
+              "src": "/data/clients/riviera-porto.mp4",
+              "poster": "/data/posters/riviera-porto.jpg",
+              "label": "Riviera · Set Porto"
             }
           ],
           "kicker": "Ready-to-wear · Riviera · 5Progress",
@@ -802,16 +808,25 @@
           "details": [
             "Shooting in Italy, June 2026",
             "Teaser and campaign reels for La Dolce Riviera collection (July 2026)",
+            "Set Breeza and Set Porto product reels (July 2026)",
             "5Progress · brand content"
           ],
           "links": [
+            {
+              "label": "@riviera__official",
+              "url": "https://www.instagram.com/riviera__official/"
+            },
             {
               "label": "Reel: La Dolce Riviera teaser",
               "url": "https://www.instagram.com/reels/DagPCJkt3_I/"
             },
             {
-              "label": "Reel: La dolce Riviera collection",
-              "url": "https://www.instagram.com/levelup.conseil/reel/Dai2k76Oecl/"
+              "label": "Reel: Set Breeza",
+              "url": "https://www.instagram.com/reel/DbTMSl9xYLn/"
+            },
+            {
+              "label": "Reel: Set Porto",
+              "url": "https://www.instagram.com/reel/DbQy9NAxXE2/"
             }
           ]
         },

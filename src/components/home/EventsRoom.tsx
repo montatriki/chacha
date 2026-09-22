@@ -78,7 +78,12 @@ export function EventsRoom({ portrait, onBack }: { portrait: boolean; onBack: ()
         <h1 className="mt-3 font-semibold text-white" style={{ fontSize: "clamp(1.6rem, 4.2vw, 3rem)", lineHeight: 1.08, letterSpacing: "-0.01em", maxWidth: "22ch", textShadow: "0 4px 40px rgba(0,0,0,0.6)", animation: "eventsRise 0.9s ease-out 0.35s both" }}>
           {EVENT_ROOM.title}
         </h1>
-        <div className="mt-4 h-px w-16" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`, animation: "eventsRise 0.9s ease-out 0.45s both" }} />
+        {EVENT_ROOM.tagline && (
+          <p className="mt-3 font-medium text-white/90" style={{ fontSize: "clamp(13px, 1.35vw, 19px)", letterSpacing: "0.02em", textShadow: "0 2px 22px rgba(0,0,0,0.6)", animation: "eventsRise 0.9s ease-out 0.42s both" }}>
+            {EVENT_ROOM.tagline}
+          </p>
+        )}
+        <div className="mt-4 h-px w-16" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`, animation: "eventsRise 0.9s ease-out 0.5s both" }} />
         {!portrait && (
           <p className="mt-4 text-white/75" style={{ fontSize: "clamp(14px, 1.05vw, 16px)", maxWidth: "56ch", lineHeight: 1.6, animation: "eventsRise 0.9s ease-out 0.55s both" }}>
             {EVENT_ROOM.intro}
