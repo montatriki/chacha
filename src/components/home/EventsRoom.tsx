@@ -129,7 +129,7 @@ export function EventsRoom({ portrait, onBack }: { portrait: boolean; onBack: ()
         >
           Follow on Instagram
         </a>
-        <button type="button" onClick={onBack} className="px-4 py-2.5 text-white/70 uppercase transition hover:text-white" style={{ fontSize: 10.5, letterSpacing: "0.28em" }}>
+        <button type="button" onClick={onBack} className="px-6 py-3 font-semibold text-white uppercase transition hover:brightness-125 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e7c98a]" style={{ fontSize: 11.5, letterSpacing: "0.3em", background: "linear-gradient(180deg, rgba(20,31,63,0.92), rgba(10,15,31,0.96))", border: "1px solid rgba(231,201,138,0.85)", borderRadius: 2, boxShadow: "0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.12)", textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}>
           {EVENT_ROOM.back}
         </button>
       </div>
